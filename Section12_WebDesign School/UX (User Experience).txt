@@ -1,0 +1,6 @@
+UX (User Experience)
+1. Simplicity
+2. Consistency
+3. Reading Patterns (F or Z layout)
+4. All Platform Design (responsiveness)
+5. Don't Use your powers for Evil

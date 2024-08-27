@@ -1,0 +1,12 @@
+=== Java Script for beginner ===
+1. How to can file.js
+2. Variable(var, let, ...)
+3. String
+4. Slice string
+5. String lowercase/ uppercase
+6. Basic functions(how to create, call, ...).
+7. Control statement.
+8. Data Structure(Array)
+9. Loops (while, for, do while, for each)
+
+

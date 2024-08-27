@@ -1,0 +1,4 @@
+=== DOM ===
+1. How to add javascript to the website
+2. How to select html element by using javascript
+(queryselector, queryselectorAll,getElementbyTagName,getElementbyclassName, getElement byID, )

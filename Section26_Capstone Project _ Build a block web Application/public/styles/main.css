@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.posts .post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.posts .post h2 {
+  margin: 0;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form button {
+  padding: 10px;
+  background-color: #7541dd;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #36f0c5;
+}
+
+a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.post {
+  background-color: rgb(189, 188, 223);
+  border-radius: 5px;
+  border: 1px solid;
+}

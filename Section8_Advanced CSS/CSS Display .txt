@@ -1,0 +1,12 @@
+CSS Display :
+1. Inline: a single line for any elements
+2. Block: take the hold width for web page
+3. Grid
+4. Flex
+5. None: hide the element
+
+
+=> resource: appbrewery.github.io/css-display/
+
+Course content
+Ü 48. CSS Display

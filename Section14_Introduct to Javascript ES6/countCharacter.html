@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Limit Example</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="userInput"
+      maxlength="20"
+      placeholder="Type here..." />
+    <p id="charCount"></p>
+
+    <script>
+      const inputField = document.getElementById("userInput");
+      const charCountDisplay = document.getElementById("charCount");
+      const maxChars = inputField.maxLength;
+
+      inputField.addEventListener("input", () => {
+        const currentLength = inputField.value.length;
+        const remainingChars = maxChars - currentLength;
+
+        // Display remaining characters in console
+
+        console.log(`Characters remaining: ${remainingChars}`);
+
+        console.log(`Characters input: ${currentLength}`);
+
+        // Update the text in the HTML
+        charCountDisplay.textContent = `Characters remaining: ${remainingChars} and Character input: ${currentLength}`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="description" content="Calculates the chance on a successful relationship between two people">
+<meta name="keywords" content="love,valentine,relation,relations,success,successful,happy,cool,calculate,calculator,love calculator,date">
+<meta name="author" content="Thijs Kinkhorst &amp; Matthijs Sypkens Smit">
+<meta name="viewport" content="width=480" />
+<!--<meta name="apple-itunes-app" content="app-id=669088244" />-->
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" href="dist/styles/main.css" type="text/css" media="all">
+
+    <title>The Love Calculator </titLe>
+
+<script type="text/javascript">
+<!-- get out of frames
+if (top.frames.length!=0)
+    top.location=self.document.location;
+//-->
+</script>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless",
+  "content": {
+    "href": "/privacy.php",
+     "message": "We use cookies to personalise ads. We also share information about your use of our site with our advertising partners who may combine it with other information you've provided to them or they've collected from your use of their services."
+   }
+})});
+</script>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="row row--justify-content-between row--menu">
+      <div class="title">
+        <a href="/"><img src="dist/images/lovecalculator-logo.svg" alt="The Love Calculator"></a>
+      </div> <!-- end header -->
+      <div class="nav-toggle">
+        <span class="nav-toggle-stripe"></span>
+        <span class="nav-toggle-stripe"></span>
+        <span class="nav-toggle-stripe"></span>
+      </div>
+      <div class="menu">
+        <nav>
+          <ul>
+            <li><a href="about.php">About the Love Calculator</a></li>
+            <li><a href="links.php">Love-Links</a></li>
+          </ul>
+        </nav>
+      </div> <!-- end menu -->
+    </div>
+  </div>
+</header>
+<div class="google_ad_728x90">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- respons-1 -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0672094540442967"
+       data-ad-slot="8444707603"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<section class="home">
+  <div class="google_ad_120x600--left">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 120x600, links -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:120px;height:600px"
+       data-ad-client="ca-pub-0672094540442967"
+       data-ad-slot="1869998600"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+  <div class="google_ad_120x600--right">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 120x600, rechts -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:120px;height:600px"
+       data-ad-client="ca-pub-0672094540442967"
+       data-ad-slot="9570903963"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+  <div class="content container container--small">
+      <h1>Welcome to this great invention of Doctor Love!</h1>
+
+      <span class="hide-mobile"><p>We all know that a name can tell a lot about a person. Names are not
+      randomly chosen: they all have a meaning.
+      Doctor Love knew this so he made another great invention just for the lonely you!</p>
+
+      <p>Sometimes you'd like to know if a relationship with someone could work
+      out. Therefore Doctor Love himself designed this great machine for you.
+      With The Love Calculator you can calculate the probability of a successful
+      relationship between two people. The Love Calculator is an <em>affective</em>
+      way to get an impression of what the chances are on a relationship between
+      two people.</p></span>
+
+      <p>To find out what the chances for you and your dream partner are, just fill in both <strong>full</strong>
+      names (both first and last name) in the two text boxes below, and press Calculate.</p>
+
+      <!-- belangrijk! -->
+      <form method="get" action="/love.php" name="lf" class="form">
+        <div class="row row--justify-content-between">
+          <div class="form-group">
+            <label for="name1">Your name</label>
+            <input type="text" name="name1" id="name1" value="" size="25" autofocus placeholder="Full name" required>
+          </div>
+          <div class="form-group">
+            <label for="name2">Your crush</label>
+            <input type="text" name="name2" id="name2" value="" size="25" placeholder="Full name" required>
+          </div>
+        </div>
+        <div class="row row--justify-content-center">
+          <div class="form-group form-group--color">
+            <button class="btn btn--primary" type="submit">Calculate love</button>
+          </div>
+        </div>
+        <img class="form__image" src="dist/images/lovecalculator-heart.svg" alt="LOVES" class="heart">
+      </form>
+      <!-- einde belangrijk! -->
+
+      <section class="buttons">
+  <div class="container">
+    <div class="row row--justify-content-center">
+      <span class="buttons__buttons">
+      Also visit:
+        <a href="http://www.cooltests.com/"><img style="vertical-align:middle"
+        src="dist/images/cooltestsmall.gif"
+        alt="CoolTests.com"></a>
+
+      <a href="http://www.lovepoemsandquotes.com/"><img style="vertical-align:middle"
+        src="dist/images/lpq.png"
+        alt="Visit Love Poems and Quotes"></a>
+      </span>
+    </div>
+  </div>
+</section>
+      <div class="google_ad_300x250--mobile">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- respons-1 -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0672094540442967"
+       data-ad-slot="8444707603"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+  </div>
+</section>
+
+<footer class="footer d-flex align-items-center">
+  <div class="container">
+    <div class="row align-items-center row--justify-content-between">
+      <p class="footer__copyright">&copy; The love Calculator 1996-2024</p>
+      <div class="footer__menu">
+        <nav>
+          <ul>
+            <li>
+              <a href="about.php">About the Love Calculator</a>
+            </li>
+            <li>
+              <a href="links.php">Love-Links</a>
+            </li>
+            <li>
+              <a href="privacy.php">Privacy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41652135-1', 'lovecalculator.com');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="dist/scripts/main.js"></script>
+</body>
+</html>

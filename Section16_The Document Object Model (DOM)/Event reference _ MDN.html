@@ -1,0 +1,630 @@
+<!doctype html><html lang="en-US" prefix="og: https://ogp.me/ns#"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="icon" href="/favicon-48x48.cbbd161b.png"/><link rel="apple-touch-icon" href="/apple-touch-icon.6803c6f0.png"/><meta name="theme-color" content="#ffffff"/><link rel="manifest" href="/manifest.56b1cedc.json"/><link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="MDN Web Docs"/><title>Event reference | MDN</title><link rel="alternate" title="Referencia de Eventos" href="https://developer.mozilla.org/es/docs/Web/Events" hreflang="es"/><link rel="alternate" title="Référence des événements" href="https://developer.mozilla.org/fr/docs/Web/Events" hreflang="fr"/><link rel="alternate" title="イベントリファレンス" href="https://developer.mozilla.org/ja/docs/Web/Events" hreflang="ja"/><link rel="alternate" title="Справочник по событиям" href="https://developer.mozilla.org/ru/docs/Web/Events" hreflang="ru"/><link rel="alternate" title="事件参考" href="https://developer.mozilla.org/zh-CN/docs/Web/Events" hreflang="zh"/><link rel="alternate" title="Event reference" href="https://developer.mozilla.org/zh-TW/docs/Web/Events" hreflang="zh-Hant"/><link rel="alternate" title="Event reference" href="https://developer.mozilla.org/en-US/docs/Web/Events" hreflang="en"/><link rel="preload" as="font" type="font/woff2" href="/static/media/Inter.var.c2fe3cb2b7c746f7966a.woff2" crossorigin><link rel="alternate" type="application/rss+xml" title="MDN Blog RSS Feed" href="https://developer.mozilla.org/en-US/blog/rss.xml" hreflang="en" /><meta name="description" content="Events are fired to notify code of &quot;interesting changes&quot; that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes."/><meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/Events"/><meta property="og:title" content="Event reference | MDN"/><meta property="og:type" content="website"/><meta property="og:locale" content="en_US"/><meta property="og:description" content="Events are fired to notify code of &quot;interesting changes&quot; that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes."/><meta property="og:image" content="https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png"/><meta property="og:image:type" content="image/png"/><meta property="og:image:height" content="1080"/><meta property="og:image:width" content="1920"/><meta property="og:image:alt" content="The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background."/><meta property="og:site_name" content="MDN Web Docs"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="MozDevNet"/><link rel="canonical" href="https://developer.mozilla.org/en-US/docs/Web/Events"/><style media="print">.article-actions-container,.document-toc-container,.language-menu,.main-menu-toggle,.on-github,.page-footer,.place,.sidebar,.top-banner,.top-navigation-main,ul.prev-next{display:none!important}.main-page-content,.main-page-content pre{padding:2px}.main-page-content pre{border-left-width:2px}</style><script src="/static/js/gtag.js" defer=""></script><script defer="defer" src="/static/js/main.dc10b0fb.js"></script><link href="/static/css/main.82856ab0.css" rel="stylesheet"></head><body><script>if(document.body.addEventListener("load",(t=>{t.target.classList.contains("interactive")&&t.target.setAttribute("data-readystate","complete")}),{capture:!0}),window&&document.documentElement){const t={light:"#ffffff",dark:"#1b1b1b"};try{const e=window.localStorage.getItem("theme");e&&(document.documentElement.className=e,document.documentElement.style.backgroundColor=t[e]);const o=window.localStorage.getItem("nop");o&&(document.documentElement.dataset.nop=o)}catch(t){console.warn("Unable to read theme from localStorage",t)}}</script><div id="root"><ul id="nav-access" class="a11y-nav"><li><a id="skip-main" href="#content">Skip to main content</a></li><li><a id="skip-search" href="#top-nav-search-input">Skip to search</a></li><li><a id="skip-select-language" href="#languages-switcher-button">Skip to select language</a></li></ul><div class="page-wrapper  category-web document-page"><div class="top-banner loading"><section class="place top container"></section></div><div class="sticky-header-container"><header class="top-navigation 
+      
+      "><div class="container "><div class="top-navigation-wrap"><a href="/en-US/" class="logo" aria-label="MDN homepage"><svg id="mdn-docs-logo" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 694.9 104.4" style="enable-background:new 0 0 694.9 104.4" xml:space="preserve" role="img"><title>MDN Web Docs</title><path d="M40.3 0 11.7 92.1H0L28.5 0h11.8zm10.4 0v92.1H40.3V0h10.4zM91 0 62.5 92.1H50.8L79.3 0H91zm10.4 0v92.1H91V0h10.4z" class="logo-m"></path><path d="M627.9 95.6h67v8.8h-67v-8.8z" class="logo-_"></path><path d="M367 42h-4l-10.7 30.8h-5.5l-10.8-26h-.4l-10.5 26h-5.2L308.7 42h-3.8v-5.6H323V42h-6.5l6.8 20.4h.4l10.3-26h4.7l11.2 26h.5l5.7-20.3h-6.2v-5.6H367V42zm34.9 20c-.4 3.2-2 5.9-4.7 8.2-2.8 2.3-6.5 3.4-11.3 3.4-5.4 0-9.7-1.6-13.1-4.7-3.3-3.2-5-7.7-5-13.7 0-5.7 1.6-10.3 4.7-14s7.4-5.5 12.9-5.5c5.1 0 9.1 1.6 11.9 4.7s4.3 6.9 4.3 11.3c0 1.5-.2 3-.5 4.7h-25.6c.3 7.7 4 11.6 10.9 11.6 2.9 0 5.1-.7 6.5-2 1.5-1.4 2.5-3 3-4.9l6 .9zM394 51.3c.2-2.4-.4-4.7-1.8-6.9s-3.8-3.3-7-3.3c-3.1 0-5.3 1-6.9 3-1.5 2-2.5 4.4-2.8 7.2H394zm51 2.4c0 5-1.3 9.5-4 13.7s-6.9 6.2-12.7 6.2c-6 0-10.3-2.2-12.7-6.7-.1.4-.2 1.4-.4 2.9s-.3 2.5-.4 2.9h-7.3c.3-1.7.6-3.5.8-5.3.3-1.8.4-3.7.4-5.5V22.3h-6v-5.6H416v27c1.1-2.2 2.7-4.1 4.7-5.7 2-1.6 4.8-2.4 8.4-2.4 4.6 0 8.4 1.6 11.4 4.7 3 3.2 4.5 7.6 4.5 13.4zm-7.7.6c0-4.2-1-7.4-3-9.5-2-2.2-4.4-3.3-7.4-3.3-3.4 0-6 1.2-8 3.7-1.9 2.4-2.9 5-3 7.7V57c0 3 1 5.6 3 7.7s4.5 3.1 7.6 3.1c3.6 0 6.3-1.3 8.1-3.9 1.8-2.7 2.7-5.9 2.7-9.6zm69.2 18.5h-13.2v-7.2c-1.2 2.2-2.8 4.1-4.9 5.6-2.1 1.6-4.8 2.4-8.3 2.4-4.8 0-8.7-1.6-11.6-4.9-2.9-3.2-4.3-7.7-4.3-13.3 0-5 1.3-9.6 4-13.7 2.6-4.1 6.9-6.2 12.8-6.2 5.7 0 9.8 2.2 12.3 6.5V22.3h-8.6v-5.6h15.8v50.6h6v5.5zM493.2 56v-4.4c-.1-3-1.2-5.5-3.2-7.3s-4.4-2.8-7.2-2.8c-3.6 0-6.3 1.3-8.2 3.9-1.9 2.6-2.8 5.8-2.8 9.6 0 4.1 1 7.3 3 9.5s4.5 3.3 7.4 3.3c3.2 0 5.8-1.3 7.8-3.8 2.1-2.6 3.1-5.3 3.2-8zm53.1-1.4c0 5.6-1.8 10.2-5.3 13.7s-8.2 5.3-13.9 5.3-10.1-1.7-13.4-5.1c-3.3-3.4-5-7.9-5-13.5 0-5.3 1.6-9.9 4.7-13.7 3.2-3.8 7.9-5.7 14.2-5.7s11 1.9 14.1 5.7c3 3.7 4.6 8.1 4.6 13.3zm-7.7-.2c0-4-1-7.2-3-9.5s-4.8-3.5-8.2-3.5c-3.6 0-6.4 1.2-8.3 3.7s-2.9 5.6-2.9 9.5c0 3.7.9 6.8 2.8 9.4 1.9 2.6 4.6 3.9 8.3 3.9 3.6 0 6.4-1.3 8.4-3.8 1.9-2.6 2.9-5.8 2.9-9.7zm45 5.8c-.4 3.2-1.9 6.3-4.4 9.1-2.5 2.9-6.4 4.3-11.8 4.3-5.2 0-9.4-1.6-12.6-4.8-3.2-3.2-4.8-7.7-4.8-13.7 0-5.5 1.6-10.1 4.7-13.9 3.2-3.8 7.6-5.7 13.2-5.7 2.3 0 4.6.3 6.7.8 2.2.5 4.2 1.5 6.2 2.9l1.5 9.5-5.9.7-1.3-6.1c-2.1-1.2-4.5-1.8-7.2-1.8-3.5 0-6.1 1.2-7.7 3.7-1.7 2.5-2.5 5.7-2.5 9.6 0 4.1.9 7.3 2.7 9.5 1.8 2.3 4.4 3.4 7.8 3.4 5.2 0 8.2-2.9 9.2-8.8l6.2 1.3zm34.7 1.9c0 3.6-1.5 6.5-4.6 8.5s-7 3-11.7 3c-5.7 0-10.6-1.2-14.6-3.6l1.2-8.8 5.7.6-.2 4.7c1.1.5 2.3.9 3.6 1.1s2.6.3 3.9.3c2.4 0 4.5-.4 6.5-1.3 1.9-.9 2.9-2.2 2.9-4.1 0-1.8-.8-3.1-2.3-3.8s-3.5-1.3-5.8-1.7-4.6-.9-6.9-1.4c-2.3-.6-4.2-1.6-5.7-2.9-1.6-1.4-2.3-3.5-2.3-6.3 0-4.1 1.5-6.9 4.6-8.5s6.4-2.4 9.9-2.4c2.6 0 5 .3 7.2.9 2.2.6 4.3 1.4 6.1 2.4l.8 8.8-5.8.7-.8-5.7c-2.3-1-4.7-1.6-7.2-1.6-2.1 0-3.7.4-5.1 1.1-1.3.8-2 2-2 3.8 0 1.7.8 2.9 2.3 3.6 1.5.7 3.4 1.2 5.7 1.6 2.2.4 4.5.8 6.7 1.4 2.2.6 4.1 1.6 5.7 3 1.4 1.6 2.2 3.7 2.2 6.6zM197.6 73.2h-17.1v-5.5h3.8V51.9c0-3.7-.7-6.3-2.1-7.9-1.4-1.6-3.3-2.3-5.7-2.3-3.2 0-5.6 1.1-7.2 3.4s-2.4 4.6-2.5 6.9v15.6h6v5.5h-17.1v-5.5h3.8V51.9c0-3.8-.7-6.4-2.1-7.9-1.4-1.5-3.3-2.3-5.6-2.3-3.2 0-5.5 1.1-7.2 3.3-1.6 2.2-2.4 4.5-2.5 6.9v15.8h6.9v5.5h-20.2v-5.5h6V42.4h-6.1v-5.6h13.4v6.4c1.2-2.1 2.7-3.8 4.7-5.2 2-1.3 4.4-2 7.3-2s5.3.7 7.5 2.1c2.2 1.4 3.7 3.5 4.5 6.4 1.1-2.5 2.7-4.5 4.9-6.1s4.8-2.4 7.9-2.4c3.5 0 6.5 1.1 8.9 3.3s3.7 5.6 3.7 10.2v18.2h6.1v5.5zm42.5 0h-13.2V66c-1.2 2.2-2.8 4.1-4.9 5.6-2.1 1.6-4.8 2.4-8.3 2.4-4.8 0-8.7-1.6-11.6-4.9-2.9-3.2-4.3-7.7-4.3-13.3 0-5 1.3-9.6 4-13.7 2.6-4.1 6.9-6.2 12.8-6.2s9.8 2.2 12.3 6.5V22.7h-8.6v-5.6h15.8v50.6h6v5.5zm-13.3-16.8V52c-.1-3-1.2-5.5-3.2-7.3s-4.4-2.8-7.2-2.8c-3.6 0-6.3 1.3-8.2 3.9-1.9 2.6-2.8 5.8-2.8 9.6 0 4.1 1 7.3 3 9.5s4.5 3.3 7.4 3.3c3.2 0 5.8-1.3 7.8-3.8 2.1-2.6 3.1-5.3 3.2-8zm61.5 16.8H269v-5.5h6V51.9c0-3.7-.7-6.3-2.2-7.9-1.4-1.6-3.4-2.3-5.7-2.3-3.1 0-5.6 1-7.4 3s-2.8 4.4-2.9 7v15.9h6v5.5h-19.3v-5.5h6V42.4h-6.2v-5.6h13.6V43c2.6-4.6 6.8-6.9 12.7-6.9 3.6 0 6.7 1.1 9.2 3.3s3.7 5.6 3.7 10.2v18.2h6v5.4h-.2z" class="logo-text"></path></svg></a><button title="Open main menu" type="button" class="button action has-icon main-menu-toggle" aria-haspopup="menu" aria-label="Open main menu" aria-expanded="false"><span class="button-wrap"><span class="icon icon-menu "></span><span class="visually-hidden">Open main menu</span></span></button></div><div class="top-navigation-main"><nav class="main-nav" aria-label="Main menu"><ul class="main-menu nojs"><li class="top-level-entry-container active"><button type="button" id="references-button" class="top-level-entry menu-toggle" aria-controls="references-menu" aria-expanded="false">References</button><a href="/en-US/docs/Web" class="top-level-entry">References</a><ul id="references-menu" class="submenu references hidden inline-submenu-lg" aria-labelledby="references-button"><li class="apis-link-container mobile-only "><a href="/en-US/docs/Web" class="submenu-item "><div class="submenu-icon"></div><div class="submenu-content-container"><div class="submenu-item-heading">Overview / Web Technology</div><p class="submenu-item-description">Web technology reference for developers</p></div></a></li><li class="html-link-container "><a href="/en-US/docs/Web/HTML" class="submenu-item "><div class="submenu-icon html"></div><div class="submenu-content-container"><div class="submenu-item-heading">HTML</div><p class="submenu-item-description">Structure of content on the web</p></div></a></li><li class="css-link-container "><a href="/en-US/docs/Web/CSS" class="submenu-item "><div class="submenu-icon css"></div><div class="submenu-content-container"><div class="submenu-item-heading">CSS</div><p class="submenu-item-description">Code used to describe document style</p></div></a></li><li class="javascript-link-container "><a href="/en-US/docs/Web/JavaScript" class="submenu-item "><div class="submenu-icon javascript"></div><div class="submenu-content-container"><div class="submenu-item-heading">JavaScript</div><p class="submenu-item-description">General-purpose scripting language</p></div></a></li><li class="http-link-container "><a href="/en-US/docs/Web/HTTP" class="submenu-item "><div class="submenu-icon http"></div><div class="submenu-content-container"><div class="submenu-item-heading">HTTP</div><p class="submenu-item-description">Protocol for transmitting web resources</p></div></a></li><li class="apis-link-container "><a href="/en-US/docs/Web/API" class="submenu-item "><div class="submenu-icon apis"></div><div class="submenu-content-container"><div class="submenu-item-heading">Web APIs</div><p class="submenu-item-description">Interfaces for building web applications</p></div></a></li><li class="apis-link-container "><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions" class="submenu-item "><div class="submenu-icon"></div><div class="submenu-content-container"><div class="submenu-item-heading">Web Extensions</div><p class="submenu-item-description">Developing extensions for web browsers</p></div></a></li><li class="apis-link-container desktop-only "><a href="/en-US/docs/Web" class="submenu-item "><div class="submenu-icon"></div><div class="submenu-content-container"><div class="submenu-item-heading">Web Technology</div><p class="submenu-item-description">Web technology reference for developers</p></div></a></li></ul></li><li class="top-level-entry-container "><button type="button" id="guides-button" class="top-level-entry menu-toggle" aria-controls="guides-menu" aria-expanded="false">Guides</button><a href="/en-US/docs/Learn" class="top-level-entry">Guides</a><ul id="guides-menu" class="submenu guides hidden inline-submenu-lg" aria-labelledby="guides-button"><li class="apis-link-container mobile-only "><a href="/en-US/docs/Learn" class="submenu-item "><div class="submenu-icon learn"></div><div class="submenu-content-container"><div class="submenu-item-heading">Overview / MDN Learning Area</div><p class="submenu-item-description">Learn web development</p></div></a></li><li class="apis-link-container desktop-only "><a href="/en-US/docs/Learn" class="submenu-item "><div class="submenu-icon learn"></div><div class="submenu-content-container"><div class="submenu-item-heading">MDN Learning Area</div><p class="submenu-item-description">Learn web development</p></div></a></li><li class="html-link-container "><a href="/en-US/docs/Learn/HTML" class="submenu-item "><div class="submenu-icon html"></div><div class="submenu-content-container"><div class="submenu-item-heading">HTML</div><p class="submenu-item-description">Learn to structure web content with HTML</p></div></a></li><li class="css-link-container "><a href="/en-US/docs/Learn/CSS" class="submenu-item "><div class="submenu-icon css"></div><div class="submenu-content-container"><div class="submenu-item-heading">CSS</div><p class="submenu-item-description">Learn to style content using CSS</p></div></a></li><li class="javascript-link-container "><a href="/en-US/docs/Learn/JavaScript" class="submenu-item "><div class="submenu-icon javascript"></div><div class="submenu-content-container"><div class="submenu-item-heading">JavaScript</div><p class="submenu-item-description">Learn to run scripts in the browser</p></div></a></li><li class=" "><a href="/en-US/docs/Web/Accessibility" class="submenu-item "><div class="submenu-icon"></div><div class="submenu-content-container"><div class="submenu-item-heading">Accessibility</div><p class="submenu-item-description">Learn to make the web accessible to all</p></div></a></li></ul></li><li class="top-level-entry-container "><button type="button" id="mdn-plus-button" class="top-level-entry menu-toggle" aria-controls="mdn-plus-menu" aria-expanded="false">Plus</button><a href="/en-US/plus" class="top-level-entry">Plus</a><ul id="mdn-plus-menu" class="submenu mdn-plus hidden inline-submenu-lg" aria-labelledby="mdn-plus-button"><li class=" "><a href="/en-US/plus" class="submenu-item "><div class="submenu-icon"></div><div class="submenu-content-container"><div class="submenu-item-heading">Overview</div><p class="submenu-item-description">A customized MDN experience</p></div></a></li><li class=" "><a href="/en-US/plus/ai-help" class="submenu-item "><div class="submenu-icon"></div><div class="submenu-content-container"><div class="submenu-item-heading">AI Help</div><p class="submenu-item-description">Get real-time assistance and support</p></div></a></li><li class=" "><a href="/en-US/plus/updates" class="submenu-item "><div class="submenu-icon"></div><div class="submenu-content-container"><div class="submenu-item-heading">Updates</div><p class="submenu-item-description">All browser compatibility updates at a glance</p></div></a></li><li class=" "><a href="/en-US/plus/docs/features/overview" class="submenu-item "><div class="submenu-icon"></div><div class="submenu-content-container"><div class="submenu-item-heading">Documentation</div><p class="submenu-item-description">Learn how to use MDN Plus</p></div></a></li><li class=" "><a href="/en-US/plus/docs/faq" class="submenu-item "><div class="submenu-icon"></div><div class="submenu-content-container"><div class="submenu-item-heading">FAQ</div><p class="submenu-item-description">Frequently asked questions about MDN Plus</p></div></a></li></ul></li><li class="top-level-entry-container "><a class="top-level-entry menu-link" href="/en-US/curriculum/">Curriculum</a></li><li class="top-level-entry-container "><a class="top-level-entry menu-link" href="/en-US/blog/">Blog</a></li><li class="top-level-entry-container "><span class="visually-hidden top-level-entry-dot"></span><button type="button" id="tools-button" class="top-level-entry menu-toggle" aria-controls="tools-menu" aria-expanded="false">Tools <sup class="new">New</sup></button><ul id="tools-menu" class="submenu tools hidden inline-submenu-lg" aria-labelledby="tools-button"><li class=" "><a href="/en-US/play" class="submenu-item "><div class="submenu-icon"></div><div class="submenu-content-container"><div class="submenu-item-heading">Playground</div><p class="submenu-item-description">Write, test and share your code</p></div></a></li><li class=" "><a href="/en-US/observatory" class="submenu-item "><div class="submenu-icon"></div><span class="visually-hidden submenu-item-dot">New</span><div class="submenu-content-container"><div class="submenu-item-heading">HTTP Observatory</div><p class="submenu-item-description">Scan a website for free</p></div></a></li><li class=" "><a href="/en-US/plus/ai-help" class="submenu-item "><div class="submenu-icon"></div><div class="submenu-content-container"><div class="submenu-item-heading">AI Help</div><p class="submenu-item-description">Get real-time assistance and support</p></div></a></li></ul></li></ul></nav><div class="header-search"><form action="/en-US/search" class="search-form search-widget" id="top-nav-search-form" role="search"><label id="top-nav-search-label" for="top-nav-search-input" class="visually-hidden">Search MDN</label><input aria-activedescendant="" aria-autocomplete="list" aria-controls="top-nav-search-menu" aria-expanded="false" aria-labelledby="top-nav-search-label" autoComplete="off" id="top-nav-search-input" role="combobox" type="search" class="search-input-field" name="q" placeholder="   " required="" value=""/><button type="button" class="button action has-icon clear-search-button"><span class="button-wrap"><span class="icon icon-cancel "></span><span class="visually-hidden">Clear search input</span></span></button><button type="submit" class="button action has-icon search-button"><span class="button-wrap"><span class="icon icon-search "></span><span class="visually-hidden">Search</span></span></button><div id="top-nav-search-menu" role="listbox" aria-labelledby="top-nav-search-label"></div></form></div><div class="theme-switcher-menu"><button type="button" class="button action has-icon theme-switcher-menu small" aria-haspopup="menu"><span class="button-wrap"><span class="icon icon-theme-os-default "></span>Theme</span></button></div><ul class="auth-container"><li><a href="/users/fxa/login/authenticate/?next=%2Fen-US%2Fdocs%2FWeb%2FEvents" class="login-link" rel="nofollow">Log in</a></li><li><a href="/users/fxa/login/authenticate/?next=%2Fen-US%2Fdocs%2FWeb%2FEvents" target="_self" rel="nofollow" class="button primary mdn-plus-subscribe-link"><span class="button-wrap">Sign up for free</span></a></li></ul></div></div></header><div class="article-actions-container"><div class="container"><button type="button" class="button action has-icon sidebar-button" aria-label="Expand sidebar" aria-expanded="false" aria-controls="sidebar-quicklinks"><span class="button-wrap"><span class="icon icon-sidebar "></span></span></button><nav class="breadcrumbs-container" aria-label="Breadcrumb"><ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs"><li property="itemListElement" typeof="ListItem"><a href="/en-US/docs/Web" class="breadcrumb" property="item" typeof="WebPage"><span property="name">References</span></a><meta property="position" content="1"/></li><li property="itemListElement" typeof="ListItem"><a href="/en-US/docs/Web/Events" class="breadcrumb-current-page" property="item" typeof="WebPage"><span property="name">Event reference</span></a><meta property="position" content="2"/></li></ol></nav><div class="article-actions"><button type="button" class="button action has-icon article-actions-toggle" aria-label="Article actions"><span class="button-wrap"><span class="icon icon-ellipses "></span><span class="article-actions-dialog-heading">Article Actions</span></span></button><ul class="article-actions-entries"><li class="article-actions-entry"><div class="languages-switcher-menu open-on-focus-within"><button id="languages-switcher-button" type="button" class="button action small has-icon languages-switcher-menu" aria-haspopup="menu"><span class="button-wrap"><span class="icon icon-language "></span>English (US)</span></button><div class="hidden"><ul class="submenu language-menu  " aria-labelledby="language-menu-button"><li class=" "><a data-locale="es" href="/es/docs/Web/Events" class="button submenu-item"><span>Español</span></a></li><li class=" "><a data-locale="fr" href="/fr/docs/Web/Events" class="button submenu-item"><span>Français</span></a></li><li class=" "><a data-locale="ja" href="/ja/docs/Web/Events" class="button submenu-item"><span>日本語</span></a></li><li class=" "><a data-locale="ru" href="/ru/docs/Web/Events" class="button submenu-item"><span>Русский</span></a></li><li class=" "><a data-locale="zh-CN" href="/zh-CN/docs/Web/Events" class="button submenu-item"><span>中文 (简体)</span></a></li><li class=" "><a data-locale="zh-TW" href="/zh-TW/docs/Web/Events" class="button submenu-item"><span>正體中文 (繁體)</span></a></li></ul></div></div></li></ul></div></div></div></div><div class="main-wrapper"><div class="sidebar-container"><aside id="sidebar-quicklinks" class="sidebar"><button type="button" class="button action backdrop" aria-label="Collapse sidebar"><span class="button-wrap"></span></button><nav aria-label="Related Topics" class="sidebar-inner"><header class="sidebar-actions"><section class="sidebar-filter-container"><div class="sidebar-filter "><label id="sidebar-filter-label" class="sidebar-filter-label" for="sidebar-filter-input"><span class="icon icon-filter"></span><span class="visually-hidden">Filter sidebar</span></label><input id="sidebar-filter-input" autoComplete="off" class="sidebar-filter-input-field false" type="text" placeholder="Filter" value=""/><button type="button" class="button action has-icon clear-sidebar-filter-button"><span class="button-wrap"><span class="icon icon-cancel "></span><span class="visually-hidden">Clear filter input</span></span></button></div></section></header><div class="sidebar-inner-nav"><div class="in-nav-toc"><div class="document-toc-container"><section class="document-toc"><header><h2 class="document-toc-heading">In this article</h2></header><ul class="document-toc-list"><li class="document-toc-item "><a class="document-toc-link" href="#event_index">Event index</a></li><li class="document-toc-item "><a class="document-toc-link" href="#specifications">Specifications</a></li></ul></section></div></div><div class="sidebar-body">
+  <ol>
+    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+  </ol><ul><li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a></li><li><a href="/en-US/docs/Web/Events/Event_handlers">Event handling (overview)</a></li></ul>
+</div></div><section class="place side"></section></nav></aside><div class="toc-container"><aside class="toc"><nav><div class="document-toc-container"><section class="document-toc"><header><h2 class="document-toc-heading">In this article</h2></header><ul class="document-toc-list"><li class="document-toc-item "><a class="document-toc-link" href="#event_index">Event index</a></li><li class="document-toc-item "><a class="document-toc-link" href="#specifications">Specifications</a></li></ul></section></div></nav></aside><section class="place side"></section></div></div><main id="content" class="main-content  "><article class="main-page-content" lang="en-US"><header><h1>Event reference</h1></header><div class="section-content"><p><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Events</a> are fired to notify code of "interesting changes" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.</p>
+<p>Each event is represented by an object that is based on the <a href="/en-US/docs/Web/API/Event"><code>Event</code></a> interface, and may have additional custom fields and/or functions to provide information about what happened. The documentation for every event has a table (near the top) that includes a link to the associated event interface, and other relevant information. A full list of the different event types is given in <a href="/en-US/docs/Web/API/Event#introduction">Event &gt; Interfaces based on Event</a>.</p>
+<p>This topic provides an index to the main <em>sorts</em> of events you might be interested in (animation, clipboard, workers etc.) along with the main classes that implement those sorts of events.</p></div><section aria-labelledby="event_index"><h2 id="event_index"><a href="#event_index">Event index</a></h2><div class="section-content"><figure class="table-container"><table class="standard-table">
+  <tbody>
+    <tr>
+      <th>Event type</th>
+      <th style="width: 50%">Description</th>
+      <th>Documentation</th>
+    </tr>
+    <tr>
+      <td>Animation</td>
+      <td>
+        <p>
+          Events related to the
+          <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animation API</a>.
+        </p>
+        <p>
+          Used to respond to changes in animation status (e.g. when an animation
+          starts or ends).
+        </p>
+      </td>
+      <td>
+        Animation events fired on
+        <a href="/en-US/docs/Web/API/Document#animation_events"><code>Document</code></a>,
+        <a href="/en-US/docs/Web/API/Window#animation_events"><code>Window</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLElement#animation_events"><code>HTMLElement</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Asynchronous data fetching</td>
+      <td>
+        <p>Events related to the fetching data.</p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/AbortSignal#events"><code>AbortSignal</code></a>,
+        <a href="/en-US/docs/Web/API/XMLHttpRequest#events"><code>XMLHttpRequest</code></a>,
+        <a href="/en-US/docs/Web/API/FileReader#events"><code>FileReader</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Clipboard</td>
+      <td>
+        <p>
+          Events related to the
+          <a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a>.
+        </p>
+        <p>Used to notify when content is cut, copied, or pasted.</p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/Document#clipboard_events"><code>Document</code></a>,
+        <a href="/en-US/docs/Web/API/Element#clipboard_events"><code>Element</code></a>,
+        <a href="/en-US/docs/Web/API/Window#clipboard_events"><code>Window</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Composition</td>
+      <td>
+        <p>
+          Events related to composition; entering text "indirectly" (rather than
+          using normal keyboard presses).
+        </p>
+        <p>
+          For example, text entered via a speech to text engine, or using
+          special key combinations that modify keyboard presses to represent new
+          characters in another language.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/Element#composition_events"><code>Element</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>CSS transition</td>
+      <td>
+        <p>
+          Events related to
+          <a href="/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</a>.
+        </p>
+        <p>
+          Provides notification events when CSS transitions start, stop, are
+          cancelled, etc.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/Document#transition_events"><code>Document</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLElement#transition_events"><code>HTMLElement</code></a>,
+        <a href="/en-US/docs/Web/API/Window#transition_events"><code>Window</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Database</td>
+      <td>
+        <p>
+          Events related to database operations: opening, closing, transactions,
+          errors, etc.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/IDBDatabase#events"><code>IDBDatabase</code></a>,
+        <a href="/en-US/docs/Web/API/IDBOpenDBRequest#events"><code>IDBOpenDBRequest</code></a>,
+        <a href="/en-US/docs/Web/API/IDBRequest#events"><code>IDBRequest</code></a>,
+        <a href="/en-US/docs/Web/API/IDBTransaction#events"><code>IDBTransaction</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>DOM mutation</td>
+      <td>
+        <p>
+          Events related to modifications to the Document Object Model (DOM)
+          hierarchy and nodes.
+        </p>
+      </td>
+      <td>
+        <div class="notecard warning" id="sect1">
+          <p>
+            <strong>Warning:</strong>
+            <a href="/en-US/docs/Web/API/MutationEvent">Mutation Events</a> are
+            deprecated.
+            <a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a>
+            should be used instead.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Drag'n'drop, Wheel</td>
+      <td>
+        <p>
+          Events related to using the
+          <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</a>
+          and <a href="/en-US/docs/Web/API/WheelEvent">wheel events</a>.
+        </p>
+        <p>
+          Drag and Wheel events are derived from mouse events. While they are
+          fired when using mouse wheel or drag/drop, they may also be used with
+          other appropriate hardware.
+        </p>
+      </td>
+      <td>
+        <p>
+          Drag events fired on
+          <a href="/en-US/docs/Web/API/Document#drag_drop_events"><code>Document</code></a>
+        </p>
+        <p>
+          Wheel events fired on
+          <a href="/en-US/docs/Web/API/Element/wheel_event"><code>Element</code></a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>Focus</td>
+      <td>
+        <p>Events related to elements gaining and losing focus.</p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/Element#focus_events"><code>Element</code></a>,
+        <a href="/en-US/docs/Web/API/Window#focus_events"><code>Window</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Form</td>
+      <td>
+        <p>Events related to forms being constructed, reset and submitted.</p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/HTMLFormElement#events"><code>HTMLFormElement</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Fullscreen</td>
+      <td>
+        <p>
+          Events related to the
+          <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a>.
+        </p>
+        <p>
+          Used to notify when the transitioning between full screen and windowed
+          modes, and also of errors occurring during this transition.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/Document#fullscreen_events"><code>Document</code></a>,
+        <a href="/en-US/docs/Web/API/Element#fullscreen_events"><code>Element</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Gamepad</td>
+      <td>
+        <p>
+          Events related to the
+          <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/Window#gamepad_events"><code>Window</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Gestures</td>
+      <td>
+        <p>
+          <a href="/en-US/docs/Web/API/Touch_events">Touch events</a> are
+          recommended for implementing gestures.
+        </p>
+      </td>
+      <td>
+        <p>
+          Events fired on
+          <a href="/en-US/docs/Web/API/Document#touch_events"><code>Document</code></a>,
+          <a href="/en-US/docs/Web/API/Element#touch_events"><code>Element</code></a>.
+        </p>
+        <p>In addition there are a number of non-standard gesture events:</p>
+        <ul>
+          <li>
+            Non-standard WebKit specific events on
+            <a href="/en-US/docs/Web/API/Element#touch_events"><code>Element</code></a>:
+            <a href="/en-US/docs/Web/API/Element/gesturestart_event"><code>gesturestart</code> event</a>,
+            <a href="/en-US/docs/Web/API/Element/gesturechange_event"><code>gesturechange</code> event</a>,
+            <a href="/en-US/docs/Web/API/Element/gestureend_event"><code>gestureend</code> event</a>.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>History</td>
+      <td>
+        <p>
+          Events related to the
+          <a href="/en-US/docs/Web/API/History_API">History API</a>.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/Window#history_events"><code>Window</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>HTML element content display management</td>
+      <td>
+        <p>Events related to changing the state of a display or textual element.</p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/HTMLDetailsElement#events"><code>HTMLDetailsElement</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLDialogElement#events"><code>HTMLDialogElement</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLSlotElement#events"><code>HTMLSlotElement</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Inputs</td>
+      <td>
+        <p>
+          Events related to HTML input elements e.g.
+          <a href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>, <a href="/en-US/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a>, or
+          <a href="/en-US/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a>.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/HTMLElement#input_events"><code>HTMLElement</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLInputElement#events"><code>HTMLInputElement</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Keyboard</td>
+      <td>
+        <p>
+          Events related to using a
+          <a href="/en-US/docs/Web/API/KeyboardEvent">keyboard</a>.
+        </p>
+        <p>Used to notify when keys are moved up, down, or just pressed.</p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/Document#keyboard_events"><code>Document</code></a>,
+        <a href="/en-US/docs/Web/API/Element#keyboard_events"><code>Element</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Loading/unloading documents</td>
+      <td>
+        <p>Events related to loading and unloading documents.</p>
+      </td>
+      <td>
+        <p>
+          Events fired on
+          <a href="/en-US/docs/Web/API/Document#load_unload_events"><code>Document</code></a>
+          and
+          <a href="/en-US/docs/Web/API/Window#load_unload_events"><code>Window</code></a>.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>Manifests</td>
+      <td>
+        <p>
+          Events related to installation of
+          <a href="/en-US/docs/Web/Manifest">progressive web app manifests</a>.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/Window#manifest_events"><code>Window</code></a>.
+      </td>
+    </tr>
+    <tr id="media">
+      <td>Media</td>
+      <td>
+        <p>
+          Events related to media usage (including the
+          <a href="/en-US/docs/Web/API/Media_Capture_and_Streams_API#events">Media Capture and Streams API</a>,
+          <a href="/en-US/docs/Web/API/Web_Audio_API#events">Web Audio API</a>,
+          <a href="/en-US/docs/Web/API/Picture-in-Picture_API#events">Picture-in-Picture API</a>, etc.).
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/ScriptProcessorNode#events"><code>ScriptProcessorNode</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLMediaElement#events"><code>HTMLMediaElement</code></a>,
+        <a href="/en-US/docs/Web/API/AudioTrackList#events"><code>AudioTrackList</code></a>,
+        <a href="/en-US/docs/Web/API/AudioScheduledSourceNode#events"><code>AudioScheduledSourceNode</code></a>,
+        <a href="/en-US/docs/Web/API/MediaRecorder#events"><code>MediaRecorder</code></a>,
+        <a href="/en-US/docs/Web/API/MediaStream#events"><code>MediaStream</code></a>,
+        <a href="/en-US/docs/Web/API/MediaStreamTrack"><code>MediaStreamTrack</code></a>,
+        <a href="/en-US/docs/Web/API/VideoTrackList#events"><code>VideoTrackList</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLTrackElement#events"><code>HTMLTrackElement</code></a>,
+        <a href="/en-US/docs/Web/API/OfflineAudioContext#events"><code>OfflineAudioContext</code></a>,
+        <a href="/en-US/docs/Web/API/TextTrack#events"><code>TextTrack</code></a>,
+        <a href="/en-US/docs/Web/API/TextTrackList#events"><code>TextTrackList</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/audio#events">Element/audio</a>,
+        <a href="/en-US/docs/Web/HTML/Element/video#events">Element/video</a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Messaging</td>
+      <td>
+        <p>
+          Events related to a window receiving a message from another browsing
+          context.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/Window#messaging_events"><code>Window</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Mouse</td>
+      <td>
+        <p>
+          Events related to using a
+          <a href="/en-US/docs/Web/API/MouseEvent">computer mouse</a>.
+        </p>
+        <p>
+          Used to notify when the mouse is clicked, doubleclicked, up and down
+          events, right-click, movement in and out of an element, text
+          selection, etc.
+        </p>
+        <p>
+          Pointer events provide a hardware-agnostic alternative to mouse
+          events. Drag and Wheel events are derived from mouse events.
+        </p>
+      </td>
+      <td>
+        Mouse events fired on
+        <a href="/en-US/docs/Web/API/Element#mouse_events"><code>Element</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td>Network/Connection</td>
+      <td>
+        <p>Events related to gaining and losing network connection.</p>
+      </td>
+      <td>
+        <p>
+          Events fired on
+          <a href="/en-US/docs/Web/API/Window#connection_events"><code>Window</code></a>.
+        </p>
+        <p>
+          Events fired on
+          <a href="/en-US/docs/Web/API/NetworkInformation#event_handler"><code>NetworkInformation</code></a>
+          (<a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>).
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>Payments</td>
+      <td>
+        <p>
+          Events related to the
+          <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a>.
+        </p>
+      </td>
+      <td>
+        <p>
+          Events fired on
+          <a href="/en-US/docs/Web/API/PaymentRequest#events"><code>PaymentRequest</code></a>,
+          <a href="/en-US/docs/Web/API/PaymentResponse#events"><code>PaymentResponse</code></a>.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>Performance</td>
+      <td>
+        <p>
+          Events related to any performance-related spec grouped into
+          <a href="/en-US/docs/Web/API/Performance_API">Performance APIs</a>.
+        </p>
+      </td>
+      <td>
+        <p>
+          Events fired on
+          <a href="/en-US/docs/Web/API/Performance#events"><code>Performance</code></a>.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>Pointer</td>
+      <td>
+        <p>
+          Events related to the
+          <a href="/en-US/docs/Web/API/Pointer_events">Pointer Events API</a>.
+        </p>
+        <p>
+          Provides hardware-agnostic notification from pointing devices
+          including Mouse, Touch, pen/stylus.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/Document#pointer_events"><code>Document</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLElement#pointer_events"><code>HTMLElement</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Print</td>
+      <td>
+        <p>Events related to printing.</p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/Window#print_events"><code>Window</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Promise rejection</td>
+      <td>
+        <p>
+          Events sent to the global script context when any JavaScript promise
+          is rejected.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/Window#promise_rejection_events"><code>Window</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Sockets</td>
+      <td>
+        <p>
+          Events related to the
+          <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets API</a>.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/WebSocket#events"><code>Websocket</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>SVG</td>
+      <td>
+        <p>Events related to SVG images.</p>
+      </td>
+      <td>
+        <p>
+          Events fired on
+          <a href="/en-US/docs/Web/API/SVGElement#events"><code>SVGElement</code></a>,
+          <a href="/en-US/docs/Web/API/SVGAnimationElement#events"><code>SVGAnimationElement</code></a>,
+          <a href="/en-US/docs/Web/API/SVGGraphicsElement#events"><code>SVGGraphicsElement</code></a>.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>Text selection</td>
+      <td>
+        <p>
+          <a href="/en-US/docs/Web/API/Selection">Selection API</a> events
+          related to selecting text.
+        </p>
+      </td>
+      <td>
+        <p>
+          Event (<code>selectionchange</code>) fired on
+          <a href="/en-US/docs/Web/API/HTMLTextAreaElement/selectionchange_event" title="HTMLTextAreaElement"><code>HTMLTextAreaElement</code></a>,
+          <a href="/en-US/docs/Web/API/HTMLInputElement/selectionchange_event" title="HTMLInputElement"><code>HTMLInputElement</code></a>.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>Touch</td>
+      <td>
+        <p>
+          Events related to the
+          <a href="/en-US/docs/Web/API/Touch_events">Touch Events API</a>.
+        </p>
+        <p>
+          Provides notification events from interacting with a touch sensitive
+          screen (i.e. using a finger or stylus). Not related to the
+          <a href="/en-US/docs/Web/API/Force_Touch_events#events">Force Touch API</a>.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/Document#touch_events"><code>Document</code></a>,
+        <a href="/en-US/docs/Web/API/Element#touch_events"><code>Element</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Virtual reality</td>
+      <td>
+        <p>
+          Events related to the
+          <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>.
+        </p>
+        <div class="notecard warning" id="sect2">
+          <p>
+            <strong>Warning:</strong> The
+            <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> (and
+            associated
+            <a href="/en-US/docs/Web/API/Window#webvr_events"><code>Window</code> events</a>) are deprecated.
+          </p>
+        </div>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/XRSystem#events"><code>XRSystem</code></a>,
+        <a href="/en-US/docs/Web/API/XRSession#events"><code>XRSession</code></a>,
+        <a href="/en-US/docs/Web/API/XRReferenceSpace#events"><code>XRReferenceSpace</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>RTC (real time communication)</td>
+      <td>
+        <p>
+          Events related to the
+          <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/RTCDataChannel#events"><code>RTCDataChannel</code></a>,
+        <a href="/en-US/docs/Web/API/RTCDTMFSender#events"><code>RTCDTMFSender</code></a>,
+        <a href="/en-US/docs/Web/API/RTCIceTransport#events"><code>RTCIceTransport</code></a>,
+        <a href="/en-US/docs/Web/API/RTCPeerConnection#events"><code>RTCPeerConnection</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Server-sent events</td>
+      <td>
+        <p>
+          Events related to the
+          <a href="/en-US/docs/Web/API/Server-sent_events">server sent events API</a>.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/EventSource#events"><code>EventSource</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Speech</td>
+      <td>
+        <p>
+          Events related to the
+          <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a>.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/SpeechSynthesisUtterance#events"><code>SpeechSynthesisUtterance</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td>Workers</td>
+      <td>
+        <p>
+          Events related to the
+          <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a>,
+          <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a>,
+          <a href="/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel API</a>, and
+          <a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a>.
+        </p>
+        <p>
+          Used to respond to new messages and message sending errors. Service
+          workers can also be notified of other events, including push
+          notifications, users clicking on displayed notifications, that push
+          subscription has been invalidated, deletion of items from the content
+          index, etc.
+        </p>
+      </td>
+      <td>
+        Events fired on
+        <a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope#events"><code>ServiceWorkerGlobalScope</code></a>,
+        <a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope#events"><code>DedicatedWorkerGlobalScope</code></a>,
+        <a href="/en-US/docs/Web/API/SharedWorkerGlobalScope#events"><code>SharedWorkerGlobalScope</code></a>,
+        <a href="/en-US/docs/Web/API/WorkerGlobalScope#events"><code>WorkerGlobalScope</code></a>,
+        <a href="/en-US/docs/Web/API/Worker#events"><code>Worker</code></a>,
+        <a href="/en-US/docs/Web/API/BroadcastChannel#events"><code>BroadcastChannel</code></a>,
+        <a href="/en-US/docs/Web/API/MessagePort#events"><code>MessagePort</code></a>.
+      </td>
+    </tr>
+  </tbody>
+</table></figure></div></section><h2 id="specifications"><a href="#specifications">Specifications</a></h2><table class="standard-table"><thead><tr><th scope="col">Specification</th></tr></thead><tbody><tr><td><a href="https://html.spec.whatwg.org/multipage/indices.html#events-2">HTML Standard<!-- --> <br/><small># <!-- -->events-2</small></a></td></tr></tbody></table></article><aside class="article-footer"><div class="article-footer-inner"><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" width="162" height="162" viewBox="0 0 162 162" fill="none" role="none"><mask id="b" fill="#fff"><path d="M97.203 47.04c8.113-7.886 18.004-13.871 28.906-17.492a78 78 0 0 1 33.969-3.39c11.443 1.39 22.401 5.295 32.024 11.411s17.656 14.28 23.476 23.86c5.819 9.579 9.269 20.318 10.083 31.385a69.85 69.85 0 0 1-5.387 32.44c-4.358 10.272-11.115 19.443-19.747 26.801-8.632 7.359-18.908 12.709-30.034 15.637l-6.17-21.698c7.666-2.017 14.746-5.703 20.694-10.773 5.948-5.071 10.603-11.389 13.606-18.467a48.14 48.14 0 0 0 3.712-22.352c-.561-7.625-2.938-15.025-6.948-21.625s-9.544-12.226-16.175-16.44-14.181-6.904-22.065-7.863a53.75 53.75 0 0 0-23.405 2.336c-7.513 2.495-14.327 6.62-19.918 12.053z"></path></mask><path stroke="url(#a)" stroke-dasharray="6, 6" stroke-width="2" d="M97.203 47.04c8.113-7.886 18.004-13.871 28.906-17.492a78 78 0 0 1 33.969-3.39c11.443 1.39 22.401 5.295 32.024 11.411s17.656 14.28 23.476 23.86c5.819 9.579 9.269 20.318 10.083 31.385a69.85 69.85 0 0 1-5.387 32.44c-4.358 10.272-11.115 19.443-19.747 26.801-8.632 7.359-18.908 12.709-30.034 15.637l-6.17-21.698c7.666-2.017 14.746-5.703 20.694-10.773 5.948-5.071 10.603-11.389 13.606-18.467a48.14 48.14 0 0 0 3.712-22.352c-.561-7.625-2.938-15.025-6.948-21.625s-9.544-12.226-16.175-16.44-14.181-6.904-22.065-7.863a53.75 53.75 0 0 0-23.405 2.336c-7.513 2.495-14.327 6.62-19.918 12.053z" mask="url(#b)" style="stroke:url(#a)" transform="translate(-63.992 -25.587)"></path><ellipse cx="8.066" cy="111.597" fill="var(--background-tertiary)" rx="53.677" ry="53.699" transform="matrix(.71707 -.697 .7243 .6895 0 0)"></ellipse><g clip-path="url(#c)" transform="translate(-63.992 -25.587)"><path fill="#9abff5" d="m144.256 137.379 32.906 12.434a4.41 4.41 0 0 1 2.559 5.667l-9.326 24.679a4.41 4.41 0 0 1-5.667 2.559l-8.226-3.108-2.332 6.17c-.466 1.233-.375 1.883-1.609 1.417l-2.253-.527c-.411-.155-.95-.594-1.206-1.161l-4.734-10.484-12.545-4.741a4.41 4.41 0 0 1-2.559-5.667l9.325-24.679a4.41 4.41 0 0 1 5.667-2.559m9.961 29.617 8.227 3.108 3.264-8.638-.498-6.768-4.113-1.555.548 7.258-4.319-1.632zm-12.339-4.663 8.226 3.108 3.264-8.637-.498-6.769-4.113-1.554.548 7.257-4.319-1.632z"></path></g><g clip-path="url(#d)" transform="translate(-63.992 -25.587)"><path fill="#81b0f3" d="M135.35 60.136 86.67 41.654c-3.346-1.27-7.124.428-8.394 3.775L64.414 81.938c-1.27 3.347.428 7.125 3.774 8.395l12.17 4.62-3.465 9.128c-.693 1.826-1.432 2.457.394 3.15l3.014 1.625c.609.231 1.637.274 2.477-.104l15.53-6.983 18.56 7.047c3.346 1.27 7.124-.428 8.395-3.775l13.862-36.51c1.27-3.346-.428-7.124-3.775-8.395M95.261 83.207l-12.17-4.62 4.852-12.779 7.19-7.017 6.085 2.31-7.725 7.51 6.389 2.426zm18.255 6.93-12.17-4.62 4.852-12.778 7.189-7.017 6.085 2.31-7.725 7.51 6.39 2.426z"></path></g><defs><clipPath id="c"><path fill="#fff" d="m198.638 146.586-65.056-24.583-24.583 65.057 65.056 24.582z"></path></clipPath><clipPath id="d"><path fill="#fff" d="m66.438 14.055 96.242 36.54-36.54 96.243-96.243-36.54z"></path></clipPath><linearGradient id="a" x1="97.203" x2="199.995" y1="47.04" y2="152.793" gradientUnits="userSpaceOnUse"><stop stop-color="#086DFC"></stop><stop offset="0.246" stop-color="#2C81FA"></stop><stop offset="0.516" stop-color="#5497F8"></stop><stop offset="0.821" stop-color="#80B0F6"></stop><stop offset="1" stop-color="#9ABFF5"></stop></linearGradient></defs></svg></div><h2>Help improve MDN</h2><fieldset class="feedback"><label>Was this page helpful to you?</label><div class="button-container"><button type="button" class="button primary has-icon yes"><span class="button-wrap"><span class="icon icon-thumbs-up "></span>Yes</span></button><button type="button" class="button primary has-icon no"><span class="button-wrap"><span class="icon icon-thumbs-down "></span>No</span></button></div></fieldset><a class="contribute" href="https://github.com/mdn/content/blob/main/CONTRIBUTING.md" title="This will take you to our contribution guidelines on GitHub." target="_blank" rel="noopener noreferrer">Learn how to contribute</a>.<p class="last-modified-date">This page was last modified on<!-- --> <time dateTime="2024-06-24T01:16:56.000Z">Jun 24, 2024</time> by<!-- --> <a href="/en-US/docs/Web/Events/contributors.txt" rel="nofollow">MDN contributors</a>.</p><div id="on-github" class="on-github"><a href="https://github.com/mdn/content/blob/main/files/en-us/web/events/index.md?plain=1" title="Folder: en-us/web/events (Opens in a new tab)" target="_blank" rel="noopener noreferrer">View this page on GitHub</a> <!-- -->•<!-- --> <a href="https://github.com/mdn/content/issues/new?template=page-report.yml&amp;mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FEvents&amp;metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fevents%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FEvents%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fevents%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2F4ca4fa3d9d1de5601b406b13dc75aff30709c66f%0A*+Document+last+modified%3A+2024-06-24T01%3A16%3A56.000Z%0A%0A%3C%2Fdetails%3E" title="This will take you to GitHub to file a new issue." target="_blank" rel="noopener noreferrer">Report a problem with this content</a></div></div></aside></main></div></div><footer id="nav-footer" class="page-footer"><div class="page-footer-grid"><div class="page-footer-logo-col"><a href="/" class="mdn-footer-logo" aria-label="MDN homepage"><svg width="48" height="17" viewBox="0 0 48 17" fill="none" xmlns="http://www.w3.org/2000/svg"><title id="mdn-footer-logo-svg">MDN logo</title><path d="M20.04 16.512H15.504V10.416C15.504 9.488 15.344 8.824 15.024 8.424C14.72 8.024 14.264 7.824 13.656 7.824C12.92 7.824 12.384 8.064 12.048 8.544C11.728 9.024 11.568 9.64 11.568 10.392V14.184H13.008V16.512H8.472V10.416C8.472 9.488 8.312 8.824 7.992 8.424C7.688 8.024 7.232 7.824 6.624 7.824C5.872 7.824 5.336 8.064 5.016 8.544C4.696 9.024 4.536 9.64 4.536 10.392V14.184H6.6V16.512H0V14.184H1.44V8.04H0.024V5.688H4.536V7.32C5.224 6.088 6.32 5.472 7.824 5.472C8.608 5.472 9.328 5.664 9.984 6.048C10.64 6.432 11.096 7.016 11.352 7.8C11.992 6.248 13.168 5.472 14.88 5.472C15.856 5.472 16.72 5.776 17.472 6.384C18.224 6.992 18.6 7.936 18.6 9.216V14.184H20.04V16.512Z" fill="currentColor"></path><path d="M33.6714 16.512H29.1354V14.496C28.8314 15.12 28.3834 15.656 27.7914 16.104C27.1994 16.536 26.4154 16.752 25.4394 16.752C24.0154 16.752 22.8954 16.264 22.0794 15.288C21.2634 14.312 20.8554 12.984 20.8554 11.304C20.8554 9.688 21.2554 8.312 22.0554 7.176C22.8554 6.04 24.0634 5.472 25.6794 5.472C26.5594 5.472 27.2794 5.648 27.8394 6C28.3994 6.352 28.8314 6.8 29.1354 7.344V2.352H26.9754V0H32.2314V14.184H33.6714V16.512ZM29.1354 11.04V10.776C29.1354 9.88 28.8954 9.184 28.4154 8.688C27.9514 8.176 27.3674 7.92 26.6634 7.92C25.9754 7.92 25.3674 8.176 24.8394 8.688C24.3274 9.2 24.0714 10.008 24.0714 11.112C24.0714 12.152 24.3114 12.944 24.7914 13.488C25.2714 14.032 25.8394 14.304 26.4954 14.304C27.3114 14.304 27.9514 13.96 28.4154 13.272C28.8954 12.584 29.1354 11.84 29.1354 11.04Z" fill="currentColor"></path><path d="M47.9589 16.512H41.9829V14.184H43.4229V10.416C43.4229 9.488 43.2629 8.824 42.9429 8.424C42.6389 8.024 42.1829 7.824 41.5749 7.824C40.8389 7.824 40.2709 8.056 39.8709 8.52C39.4709 8.968 39.2629 9.56 39.2469 10.296V14.184H40.6869V16.512H34.7109V14.184H36.1509V8.04H34.5909V5.688H39.2469V7.344C39.9669 6.096 41.1269 5.472 42.7269 5.472C43.7509 5.472 44.6389 5.776 45.3909 6.384C46.1429 6.992 46.5189 7.936 46.5189 9.216V14.184H47.9589V16.512Z" fill="currentColor"></path></svg></a><p>Your blueprint for a better internet.</p><ul class="social-icons"><li><a class="icon icon-mastodon" href="https://mozilla.social/@mdn" target="_blank" rel="me noopener noreferrer"><span class="visually-hidden">MDN on Mastodon</span></a></li><li><a class="icon icon-twitter-x" href="https://twitter.com/mozdevnet" target="_blank" rel="noopener noreferrer"><span class="visually-hidden">MDN on X (formerly Twitter)</span></a></li><li><a class="icon icon-github-mark-small" href="https://github.com/mdn/" target="_blank" rel="noopener noreferrer"><span class="visually-hidden">MDN on GitHub</span></a></li><li><a class="icon icon-feed" href="/en-US/blog/rss.xml" target="_blank"><span class="visually-hidden">MDN Blog RSS Feed</span></a></li></ul></div><div class="page-footer-nav-col-1"><h2 class="footer-nav-heading">MDN</h2><ul class="footer-nav-list"><li class="footer-nav-item"><a href="/en-US/about">About</a></li><li class="footer-nav-item"><a href="/en-US/blog/">Blog</a></li><li class="footer-nav-item"><a href="https://www.mozilla.org/en-US/careers/listings/?team=ProdOps" target="_blank" rel="noopener noreferrer">Careers</a></li><li class="footer-nav-item"><a href="/en-US/advertising">Advertise with us</a></li></ul></div><div class="page-footer-nav-col-2"><h2 class="footer-nav-heading">Support</h2><ul class="footer-nav-list"><li class="footer-nav-item"><a class="footer-nav-link" href="https://support.mozilla.org/products/mdn-plus">Product help</a></li><li class="footer-nav-item"><a class="footer-nav-link" href="/en-US/docs/MDN/Community/Issues">Report an issue</a></li></ul></div><div class="page-footer-nav-col-3"><h2 class="footer-nav-heading">Our communities</h2><ul class="footer-nav-list"><li class="footer-nav-item"><a class="footer-nav-link" href="/en-US/community">MDN Community</a></li><li class="footer-nav-item"><a class="footer-nav-link" href="https://discourse.mozilla.org/c/mdn/236" target="_blank" rel="noopener noreferrer">MDN Forum</a></li><li class="footer-nav-item"><a class="footer-nav-link" href="/discord" target="_blank" rel="noopener noreferrer">MDN Chat</a></li></ul></div><div class="page-footer-nav-col-4"><h2 class="footer-nav-heading">Developers</h2><ul class="footer-nav-list"><li class="footer-nav-item"><a class="footer-nav-link" href="/en-US/docs/Web">Web Technologies</a></li><li class="footer-nav-item"><a class="footer-nav-link" href="/en-US/docs/Learn">Learn Web Development</a></li><li class="footer-nav-item"><a class="footer-nav-link" href="/en-US/plus">MDN Plus</a></li><li class="footer-nav-item"><a href="https://hacks.mozilla.org/" target="_blank" rel="noopener noreferrer">Hacks Blog</a></li></ul></div><div class="page-footer-moz"><a href="https://www.mozilla.org/" class="footer-moz-logo-link" target="_blank" rel="noopener noreferrer"><svg width="112" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><title id="mozilla-footer-logo-svg">Mozilla logo</title><path d="M41.753 14.218c-2.048 0-3.324 1.522-3.324 4.157 0 2.423 1.119 4.286 3.29 4.286 2.082 0 3.447-1.678 3.447-4.347 0-2.826-1.522-4.096-3.413-4.096Zm54.89 7.044c0 .901.437 1.618 1.645 1.618 1.427 0 2.949-1.024 3.044-3.352-.649-.095-1.365-.185-2.02-.185-1.426-.005-2.668.397-2.668 1.92Z" fill="currentColor"></path><path d="M0 0v32h111.908V0H0Zm32.56 25.426h-5.87v-7.884c0-2.423-.806-3.352-2.39-3.352-1.924 0-2.702 1.365-2.702 3.324v4.868h1.864v3.044h-5.864v-7.884c0-2.423-.806-3.352-2.39-3.352-1.924 0-2.702 1.365-2.702 3.324v4.868h2.669v3.044H6.642v-3.044h1.863v-7.918H6.642V11.42h5.864v2.11c.839-1.489 2.3-2.39 4.252-2.39 2.02 0 3.878.963 4.566 3.01.778-1.862 2.361-3.01 4.566-3.01 2.512 0 4.812 1.522 4.812 4.84v6.402h1.863v3.044h-.005Zm9.036.307c-4.314 0-7.296-2.635-7.296-7.106 0-4.096 2.484-7.481 7.514-7.481s7.481 3.38 7.481 7.29c0 4.472-3.228 7.297-7.699 7.297Zm22.578-.307H51.942l-.403-2.11 7.7-8.846h-4.376l-.621 2.17-2.888-.313.498-4.907h12.294l.313 2.11-7.767 8.852h4.533l.654-2.172 3.167.308-.872 4.908Zm7.99 0h-4.191v-5.03h4.19v5.03Zm0-8.976h-4.191v-5.03h4.19v5.03Zm2.618 8.976 6.054-21.358h3.945l-6.054 21.358h-3.945Zm8.136 0 6.048-21.358h3.945l-6.054 21.358h-3.939Zm21.486.307c-1.863 0-2.887-1.085-3.072-2.792-.805 1.427-2.232 2.792-4.498 2.792-2.02 0-4.314-1.085-4.314-4.006 0-3.447 3.323-4.253 6.518-4.253.778 0 1.584.034 2.3.124v-.465c0-1.427-.034-3.133-2.3-3.133-.84 0-1.488.061-2.143.402l-.453 1.578-3.195-.34.549-3.224c2.45-.996 3.692-1.27 5.992-1.27 3.01 0 5.556 1.55 5.556 4.75v6.083c0 .805.314 1.085.963 1.085.184 0 .375-.034.587-.095l.034 2.11a5.432 5.432 0 0 1-2.524.654Z" fill="currentColor"></path></svg></a><ul class="footer-moz-list"><li class="footer-moz-item"><a href="https://www.mozilla.org/privacy/websites/" class="footer-moz-link" target="_blank" rel="noopener noreferrer">Website Privacy Notice</a></li><li class="footer-moz-item"><a href="https://www.mozilla.org/privacy/websites/#cookies" class="footer-moz-link" target="_blank" rel="noopener noreferrer">Cookies</a></li><li class="footer-moz-item"><a href="https://www.mozilla.org/about/legal/terms/mozilla" class="footer-moz-link" target="_blank" rel="noopener noreferrer">Legal</a></li><li class="footer-moz-item"><a href="https://www.mozilla.org/about/governance/policies/participation/" class="footer-moz-link" target="_blank" rel="noopener noreferrer">Community Participation Guidelines</a></li></ul></div><div class="page-footer-legal"><p id="license" class="page-footer-legal-text">Visit<!-- --> <a href="https://www.mozilla.org" target="_blank" rel="noopener noreferrer">Mozilla Corporation’s</a> <!-- -->not-for-profit parent, the<!-- --> <a target="_blank" rel="noopener noreferrer" href="https://foundation.mozilla.org/">Mozilla Foundation</a>.<br/>Portions of this content are ©1998–<!-- -->2024<!-- --> by individual mozilla.org contributors. Content available under<!-- --> <a href="/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license">a Creative Commons license</a>.</p></div></div></footer></div><script type="application/json" id="hydration">{"url":"/en-US/docs/Web/Events","doc":{"isMarkdown":true,"isTranslated":false,"isActive":true,"flaws":{},"title":"Event reference","mdn_url":"/en-US/docs/Web/Events","locale":"en-US","native":"English (US)","sidebarHTML":"\n  <ol>\n    <li><a href=\"/en-US/docs/Learn/JavaScript/Building_blocks/Events\">Introduction to events</a></li>\n  </ol><ul><li><a href=\"/en-US/docs/Web/Events/Creating_and_triggering_events\">Creating and triggering events</a></li><li><a href=\"/en-US/docs/Web/Events/Event_handlers\">Event handling (overview)</a></li></ul>\n","body":[{"type":"prose","value":{"id":null,"title":null,"isH3":false,"content":"<p><a href=\"/en-US/docs/Learn/JavaScript/Building_blocks/Events\">Events</a> are fired to notify code of \"interesting changes\" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.</p>\n<p>Each event is represented by an object that is based on the <a href=\"/en-US/docs/Web/API/Event\"><code>Event</code></a> interface, and may have additional custom fields and/or functions to provide information about what happened. The documentation for every event has a table (near the top) that includes a link to the associated event interface, and other relevant information. A full list of the different event types is given in <a href=\"/en-US/docs/Web/API/Event#introduction\">Event &gt; Interfaces based on Event</a>.</p>\n<p>This topic provides an index to the main <em>sorts</em> of events you might be interested in (animation, clipboard, workers etc.) along with the main classes that implement those sorts of events.</p>"}},{"type":"prose","value":{"id":"event_index","title":"Event index","isH3":false,"content":"<figure class=\"table-container\"><table class=\"standard-table\">\n  <tbody>\n    <tr>\n      <th>Event type</th>\n      <th style=\"width: 50%\">Description</th>\n      <th>Documentation</th>\n    </tr>\n    <tr>\n      <td>Animation</td>\n      <td>\n        <p>\n          Events related to the\n          <a href=\"/en-US/docs/Web/API/Web_Animations_API\">Web Animation API</a>.\n        </p>\n        <p>\n          Used to respond to changes in animation status (e.g. when an animation\n          starts or ends).\n        </p>\n      </td>\n      <td>\n        Animation events fired on\n        <a href=\"/en-US/docs/Web/API/Document#animation_events\"><code>Document</code></a>,\n        <a href=\"/en-US/docs/Web/API/Window#animation_events\"><code>Window</code></a>,\n        <a href=\"/en-US/docs/Web/API/HTMLElement#animation_events\"><code>HTMLElement</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Asynchronous data fetching</td>\n      <td>\n        <p>Events related to the fetching data.</p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/AbortSignal#events\"><code>AbortSignal</code></a>,\n        <a href=\"/en-US/docs/Web/API/XMLHttpRequest#events\"><code>XMLHttpRequest</code></a>,\n        <a href=\"/en-US/docs/Web/API/FileReader#events\"><code>FileReader</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Clipboard</td>\n      <td>\n        <p>\n          Events related to the\n          <a href=\"/en-US/docs/Web/API/Clipboard_API\">Clipboard API</a>.\n        </p>\n        <p>Used to notify when content is cut, copied, or pasted.</p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/Document#clipboard_events\"><code>Document</code></a>,\n        <a href=\"/en-US/docs/Web/API/Element#clipboard_events\"><code>Element</code></a>,\n        <a href=\"/en-US/docs/Web/API/Window#clipboard_events\"><code>Window</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Composition</td>\n      <td>\n        <p>\n          Events related to composition; entering text \"indirectly\" (rather than\n          using normal keyboard presses).\n        </p>\n        <p>\n          For example, text entered via a speech to text engine, or using\n          special key combinations that modify keyboard presses to represent new\n          characters in another language.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/Element#composition_events\"><code>Element</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>CSS transition</td>\n      <td>\n        <p>\n          Events related to\n          <a href=\"/en-US/docs/Web/CSS/CSS_transitions\">CSS Transitions</a>.\n        </p>\n        <p>\n          Provides notification events when CSS transitions start, stop, are\n          cancelled, etc.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/Document#transition_events\"><code>Document</code></a>,\n        <a href=\"/en-US/docs/Web/API/HTMLElement#transition_events\"><code>HTMLElement</code></a>,\n        <a href=\"/en-US/docs/Web/API/Window#transition_events\"><code>Window</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Database</td>\n      <td>\n        <p>\n          Events related to database operations: opening, closing, transactions,\n          errors, etc.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/IDBDatabase#events\"><code>IDBDatabase</code></a>,\n        <a href=\"/en-US/docs/Web/API/IDBOpenDBRequest#events\"><code>IDBOpenDBRequest</code></a>,\n        <a href=\"/en-US/docs/Web/API/IDBRequest#events\"><code>IDBRequest</code></a>,\n        <a href=\"/en-US/docs/Web/API/IDBTransaction#events\"><code>IDBTransaction</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>DOM mutation</td>\n      <td>\n        <p>\n          Events related to modifications to the Document Object Model (DOM)\n          hierarchy and nodes.\n        </p>\n      </td>\n      <td>\n        <div class=\"notecard warning\" id=\"sect1\">\n          <p>\n            <strong>Warning:</strong>\n            <a href=\"/en-US/docs/Web/API/MutationEvent\">Mutation Events</a> are\n            deprecated.\n            <a href=\"/en-US/docs/Web/API/MutationObserver\">Mutation Observers</a>\n            should be used instead.\n          </p>\n        </div>\n      </td>\n    </tr>\n    <tr>\n      <td>Drag'n'drop, Wheel</td>\n      <td>\n        <p>\n          Events related to using the\n          <a href=\"/en-US/docs/Web/API/HTML_Drag_and_Drop_API\">HTML Drag and Drop API</a>\n          and <a href=\"/en-US/docs/Web/API/WheelEvent\">wheel events</a>.\n        </p>\n        <p>\n          Drag and Wheel events are derived from mouse events. While they are\n          fired when using mouse wheel or drag/drop, they may also be used with\n          other appropriate hardware.\n        </p>\n      </td>\n      <td>\n        <p>\n          Drag events fired on\n          <a href=\"/en-US/docs/Web/API/Document#drag_drop_events\"><code>Document</code></a>\n        </p>\n        <p>\n          Wheel events fired on\n          <a href=\"/en-US/docs/Web/API/Element/wheel_event\"><code>Element</code></a>\n        </p>\n      </td>\n    </tr>\n    <tr>\n      <td>Focus</td>\n      <td>\n        <p>Events related to elements gaining and losing focus.</p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/Element#focus_events\"><code>Element</code></a>,\n        <a href=\"/en-US/docs/Web/API/Window#focus_events\"><code>Window</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Form</td>\n      <td>\n        <p>Events related to forms being constructed, reset and submitted.</p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/HTMLFormElement#events\"><code>HTMLFormElement</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Fullscreen</td>\n      <td>\n        <p>\n          Events related to the\n          <a href=\"/en-US/docs/Web/API/Fullscreen_API\">Fullscreen API</a>.\n        </p>\n        <p>\n          Used to notify when the transitioning between full screen and windowed\n          modes, and also of errors occurring during this transition.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/Document#fullscreen_events\"><code>Document</code></a>,\n        <a href=\"/en-US/docs/Web/API/Element#fullscreen_events\"><code>Element</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Gamepad</td>\n      <td>\n        <p>\n          Events related to the\n          <a href=\"/en-US/docs/Web/API/Gamepad_API\">Gamepad API</a>.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/Window#gamepad_events\"><code>Window</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Gestures</td>\n      <td>\n        <p>\n          <a href=\"/en-US/docs/Web/API/Touch_events\">Touch events</a> are\n          recommended for implementing gestures.\n        </p>\n      </td>\n      <td>\n        <p>\n          Events fired on\n          <a href=\"/en-US/docs/Web/API/Document#touch_events\"><code>Document</code></a>,\n          <a href=\"/en-US/docs/Web/API/Element#touch_events\"><code>Element</code></a>.\n        </p>\n        <p>In addition there are a number of non-standard gesture events:</p>\n        <ul>\n          <li>\n            Non-standard WebKit specific events on\n            <a href=\"/en-US/docs/Web/API/Element#touch_events\"><code>Element</code></a>:\n            <a href=\"/en-US/docs/Web/API/Element/gesturestart_event\"><code>gesturestart</code> event</a>,\n            <a href=\"/en-US/docs/Web/API/Element/gesturechange_event\"><code>gesturechange</code> event</a>,\n            <a href=\"/en-US/docs/Web/API/Element/gestureend_event\"><code>gestureend</code> event</a>.\n          </li>\n        </ul>\n      </td>\n    </tr>\n    <tr>\n      <td>History</td>\n      <td>\n        <p>\n          Events related to the\n          <a href=\"/en-US/docs/Web/API/History_API\">History API</a>.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/Window#history_events\"><code>Window</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>HTML element content display management</td>\n      <td>\n        <p>Events related to changing the state of a display or textual element.</p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/HTMLDetailsElement#events\"><code>HTMLDetailsElement</code></a>,\n        <a href=\"/en-US/docs/Web/API/HTMLDialogElement#events\"><code>HTMLDialogElement</code></a>,\n        <a href=\"/en-US/docs/Web/API/HTMLSlotElement#events\"><code>HTMLSlotElement</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Inputs</td>\n      <td>\n        <p>\n          Events related to HTML input elements e.g.\n          <a href=\"/en-US/docs/Web/HTML/Element/input\"><code>&lt;input&gt;</code></a>, <a href=\"/en-US/docs/Web/HTML/Element/select\"><code>&lt;select&gt;</code></a>, or\n          <a href=\"/en-US/docs/Web/HTML/Element/textarea\"><code>&lt;textarea&gt;</code></a>.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/HTMLElement#input_events\"><code>HTMLElement</code></a>,\n        <a href=\"/en-US/docs/Web/API/HTMLInputElement#events\"><code>HTMLInputElement</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Keyboard</td>\n      <td>\n        <p>\n          Events related to using a\n          <a href=\"/en-US/docs/Web/API/KeyboardEvent\">keyboard</a>.\n        </p>\n        <p>Used to notify when keys are moved up, down, or just pressed.</p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/Document#keyboard_events\"><code>Document</code></a>,\n        <a href=\"/en-US/docs/Web/API/Element#keyboard_events\"><code>Element</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Loading/unloading documents</td>\n      <td>\n        <p>Events related to loading and unloading documents.</p>\n      </td>\n      <td>\n        <p>\n          Events fired on\n          <a href=\"/en-US/docs/Web/API/Document#load_unload_events\"><code>Document</code></a>\n          and\n          <a href=\"/en-US/docs/Web/API/Window#load_unload_events\"><code>Window</code></a>.\n        </p>\n      </td>\n    </tr>\n    <tr>\n      <td>Manifests</td>\n      <td>\n        <p>\n          Events related to installation of\n          <a href=\"/en-US/docs/Web/Manifest\">progressive web app manifests</a>.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/Window#manifest_events\"><code>Window</code></a>.\n      </td>\n    </tr>\n    <tr id=\"media\">\n      <td>Media</td>\n      <td>\n        <p>\n          Events related to media usage (including the\n          <a href=\"/en-US/docs/Web/API/Media_Capture_and_Streams_API#events\">Media Capture and Streams API</a>,\n          <a href=\"/en-US/docs/Web/API/Web_Audio_API#events\">Web Audio API</a>,\n          <a href=\"/en-US/docs/Web/API/Picture-in-Picture_API#events\">Picture-in-Picture API</a>, etc.).\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/ScriptProcessorNode#events\"><code>ScriptProcessorNode</code></a>,\n        <a href=\"/en-US/docs/Web/API/HTMLMediaElement#events\"><code>HTMLMediaElement</code></a>,\n        <a href=\"/en-US/docs/Web/API/AudioTrackList#events\"><code>AudioTrackList</code></a>,\n        <a href=\"/en-US/docs/Web/API/AudioScheduledSourceNode#events\"><code>AudioScheduledSourceNode</code></a>,\n        <a href=\"/en-US/docs/Web/API/MediaRecorder#events\"><code>MediaRecorder</code></a>,\n        <a href=\"/en-US/docs/Web/API/MediaStream#events\"><code>MediaStream</code></a>,\n        <a href=\"/en-US/docs/Web/API/MediaStreamTrack\"><code>MediaStreamTrack</code></a>,\n        <a href=\"/en-US/docs/Web/API/VideoTrackList#events\"><code>VideoTrackList</code></a>,\n        <a href=\"/en-US/docs/Web/API/HTMLTrackElement#events\"><code>HTMLTrackElement</code></a>,\n        <a href=\"/en-US/docs/Web/API/OfflineAudioContext#events\"><code>OfflineAudioContext</code></a>,\n        <a href=\"/en-US/docs/Web/API/TextTrack#events\"><code>TextTrack</code></a>,\n        <a href=\"/en-US/docs/Web/API/TextTrackList#events\"><code>TextTrackList</code></a>,\n        <a href=\"/en-US/docs/Web/HTML/Element/audio#events\">Element/audio</a>,\n        <a href=\"/en-US/docs/Web/HTML/Element/video#events\">Element/video</a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Messaging</td>\n      <td>\n        <p>\n          Events related to a window receiving a message from another browsing\n          context.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/Window#messaging_events\"><code>Window</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Mouse</td>\n      <td>\n        <p>\n          Events related to using a\n          <a href=\"/en-US/docs/Web/API/MouseEvent\">computer mouse</a>.\n        </p>\n        <p>\n          Used to notify when the mouse is clicked, doubleclicked, up and down\n          events, right-click, movement in and out of an element, text\n          selection, etc.\n        </p>\n        <p>\n          Pointer events provide a hardware-agnostic alternative to mouse\n          events. Drag and Wheel events are derived from mouse events.\n        </p>\n      </td>\n      <td>\n        Mouse events fired on\n        <a href=\"/en-US/docs/Web/API/Element#mouse_events\"><code>Element</code></a>\n      </td>\n    </tr>\n    <tr>\n      <td>Network/Connection</td>\n      <td>\n        <p>Events related to gaining and losing network connection.</p>\n      </td>\n      <td>\n        <p>\n          Events fired on\n          <a href=\"/en-US/docs/Web/API/Window#connection_events\"><code>Window</code></a>.\n        </p>\n        <p>\n          Events fired on\n          <a href=\"/en-US/docs/Web/API/NetworkInformation#event_handler\"><code>NetworkInformation</code></a>\n          (<a href=\"/en-US/docs/Web/API/Network_Information_API\">Network Information API</a>).\n        </p>\n      </td>\n    </tr>\n    <tr>\n      <td>Payments</td>\n      <td>\n        <p>\n          Events related to the\n          <a href=\"/en-US/docs/Web/API/Payment_Request_API\">Payment Request API</a>.\n        </p>\n      </td>\n      <td>\n        <p>\n          Events fired on\n          <a href=\"/en-US/docs/Web/API/PaymentRequest#events\"><code>PaymentRequest</code></a>,\n          <a href=\"/en-US/docs/Web/API/PaymentResponse#events\"><code>PaymentResponse</code></a>.\n        </p>\n      </td>\n    </tr>\n    <tr>\n      <td>Performance</td>\n      <td>\n        <p>\n          Events related to any performance-related spec grouped into\n          <a href=\"/en-US/docs/Web/API/Performance_API\">Performance APIs</a>.\n        </p>\n      </td>\n      <td>\n        <p>\n          Events fired on\n          <a href=\"/en-US/docs/Web/API/Performance#events\"><code>Performance</code></a>.\n        </p>\n      </td>\n    </tr>\n    <tr>\n      <td>Pointer</td>\n      <td>\n        <p>\n          Events related to the\n          <a href=\"/en-US/docs/Web/API/Pointer_events\">Pointer Events API</a>.\n        </p>\n        <p>\n          Provides hardware-agnostic notification from pointing devices\n          including Mouse, Touch, pen/stylus.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/Document#pointer_events\"><code>Document</code></a>,\n        <a href=\"/en-US/docs/Web/API/HTMLElement#pointer_events\"><code>HTMLElement</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Print</td>\n      <td>\n        <p>Events related to printing.</p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/Window#print_events\"><code>Window</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Promise rejection</td>\n      <td>\n        <p>\n          Events sent to the global script context when any JavaScript promise\n          is rejected.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/Window#promise_rejection_events\"><code>Window</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Sockets</td>\n      <td>\n        <p>\n          Events related to the\n          <a href=\"/en-US/docs/Web/API/WebSockets_API\">WebSockets API</a>.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/WebSocket#events\"><code>Websocket</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>SVG</td>\n      <td>\n        <p>Events related to SVG images.</p>\n      </td>\n      <td>\n        <p>\n          Events fired on\n          <a href=\"/en-US/docs/Web/API/SVGElement#events\"><code>SVGElement</code></a>,\n          <a href=\"/en-US/docs/Web/API/SVGAnimationElement#events\"><code>SVGAnimationElement</code></a>,\n          <a href=\"/en-US/docs/Web/API/SVGGraphicsElement#events\"><code>SVGGraphicsElement</code></a>.\n        </p>\n      </td>\n    </tr>\n    <tr>\n      <td>Text selection</td>\n      <td>\n        <p>\n          <a href=\"/en-US/docs/Web/API/Selection\">Selection API</a> events\n          related to selecting text.\n        </p>\n      </td>\n      <td>\n        <p>\n          Event (<code>selectionchange</code>) fired on\n          <a href=\"/en-US/docs/Web/API/HTMLTextAreaElement/selectionchange_event\" title=\"HTMLTextAreaElement\"><code>HTMLTextAreaElement</code></a>,\n          <a href=\"/en-US/docs/Web/API/HTMLInputElement/selectionchange_event\" title=\"HTMLInputElement\"><code>HTMLInputElement</code></a>.\n        </p>\n      </td>\n    </tr>\n    <tr>\n      <td>Touch</td>\n      <td>\n        <p>\n          Events related to the\n          <a href=\"/en-US/docs/Web/API/Touch_events\">Touch Events API</a>.\n        </p>\n        <p>\n          Provides notification events from interacting with a touch sensitive\n          screen (i.e. using a finger or stylus). Not related to the\n          <a href=\"/en-US/docs/Web/API/Force_Touch_events#events\">Force Touch API</a>.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/Document#touch_events\"><code>Document</code></a>,\n        <a href=\"/en-US/docs/Web/API/Element#touch_events\"><code>Element</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Virtual reality</td>\n      <td>\n        <p>\n          Events related to the\n          <a href=\"/en-US/docs/Web/API/WebXR_Device_API\">WebXR Device API</a>.\n        </p>\n        <div class=\"notecard warning\" id=\"sect2\">\n          <p>\n            <strong>Warning:</strong> The\n            <a href=\"/en-US/docs/Web/API/WebVR_API\">WebVR API</a> (and\n            associated\n            <a href=\"/en-US/docs/Web/API/Window#webvr_events\"><code>Window</code> events</a>) are deprecated.\n          </p>\n        </div>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/XRSystem#events\"><code>XRSystem</code></a>,\n        <a href=\"/en-US/docs/Web/API/XRSession#events\"><code>XRSession</code></a>,\n        <a href=\"/en-US/docs/Web/API/XRReferenceSpace#events\"><code>XRReferenceSpace</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>RTC (real time communication)</td>\n      <td>\n        <p>\n          Events related to the\n          <a href=\"/en-US/docs/Web/API/WebRTC_API\">WebRTC API</a>.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/RTCDataChannel#events\"><code>RTCDataChannel</code></a>,\n        <a href=\"/en-US/docs/Web/API/RTCDTMFSender#events\"><code>RTCDTMFSender</code></a>,\n        <a href=\"/en-US/docs/Web/API/RTCIceTransport#events\"><code>RTCIceTransport</code></a>,\n        <a href=\"/en-US/docs/Web/API/RTCPeerConnection#events\"><code>RTCPeerConnection</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Server-sent events</td>\n      <td>\n        <p>\n          Events related to the\n          <a href=\"/en-US/docs/Web/API/Server-sent_events\">server sent events API</a>.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/EventSource#events\"><code>EventSource</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Speech</td>\n      <td>\n        <p>\n          Events related to the\n          <a href=\"/en-US/docs/Web/API/Web_Speech_API\">Web Speech API</a>.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/SpeechSynthesisUtterance#events\"><code>SpeechSynthesisUtterance</code></a>.\n      </td>\n    </tr>\n    <tr>\n      <td>Workers</td>\n      <td>\n        <p>\n          Events related to the\n          <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers API</a>,\n          <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Worker API</a>,\n          <a href=\"/en-US/docs/Web/API/Broadcast_Channel_API\">Broadcast Channel API</a>, and\n          <a href=\"/en-US/docs/Web/API/Channel_Messaging_API\">Channel Messaging API</a>.\n        </p>\n        <p>\n          Used to respond to new messages and message sending errors. Service\n          workers can also be notified of other events, including push\n          notifications, users clicking on displayed notifications, that push\n          subscription has been invalidated, deletion of items from the content\n          index, etc.\n        </p>\n      </td>\n      <td>\n        Events fired on\n        <a href=\"/en-US/docs/Web/API/ServiceWorkerGlobalScope#events\"><code>ServiceWorkerGlobalScope</code></a>,\n        <a href=\"/en-US/docs/Web/API/DedicatedWorkerGlobalScope#events\"><code>DedicatedWorkerGlobalScope</code></a>,\n        <a href=\"/en-US/docs/Web/API/SharedWorkerGlobalScope#events\"><code>SharedWorkerGlobalScope</code></a>,\n        <a href=\"/en-US/docs/Web/API/WorkerGlobalScope#events\"><code>WorkerGlobalScope</code></a>,\n        <a href=\"/en-US/docs/Web/API/Worker#events\"><code>Worker</code></a>,\n        <a href=\"/en-US/docs/Web/API/BroadcastChannel#events\"><code>BroadcastChannel</code></a>,\n        <a href=\"/en-US/docs/Web/API/MessagePort#events\"><code>MessagePort</code></a>.\n      </td>\n    </tr>\n  </tbody>\n</table></figure>"}},{"type":"specifications","value":{"title":"Specifications","id":"specifications","isH3":false,"specifications":[{"bcdSpecificationURL":"https://html.spec.whatwg.org/multipage/indices.html#events-2","title":"HTML Standard"}],"query":"undefined"}}],"toc":[{"text":"Event index","id":"event_index"},{"text":"Specifications","id":"specifications"}],"summary":"Events are fired to notify code of \"interesting changes\" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.","popularity":0.1664,"modified":"2024-06-24T01:16:56.000Z","other_translations":[{"locale":"es","title":"Referencia de Eventos","native":"Español"},{"locale":"fr","title":"Référence des événements","native":"Français"},{"locale":"ja","title":"イベントリファレンス","native":"日本語"},{"locale":"ru","title":"Справочник по событиям","native":"Русский"},{"locale":"zh-CN","title":"事件参考","native":"中文 (简体)"},{"locale":"zh-TW","title":"Event reference","native":"正體中文 (繁體)"}],"source":{"folder":"en-us/web/events","github_url":"https://github.com/mdn/content/blob/main/files/en-us/web/events/index.md","last_commit_url":"https://github.com/mdn/content/commit/4ca4fa3d9d1de5601b406b13dc75aff30709c66f","filename":"index.md"},"short_title":"Event reference","parents":[{"uri":"/en-US/docs/Web","title":"References"},{"uri":"/en-US/docs/Web/Events","title":"Event reference"}],"pageTitle":"Event reference | MDN","noIndexing":false}}</script></body></html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <title>Why Can&#x27;t Programmers.. Program?</title>
+    <meta name="description" content="a blog by Jeff Atwood on programming and human factors" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="sl0m9SU_4V0JcvjWlOX4dUFBR6VS2P4tlxjJMo0gphU" />
+   
+    <link rel="stylesheet" type="text/css" href="https://blog.codinghorror.com/assets/css/screen.css?v=9a339fd5d7" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" />
+    <link rel="alternate" type="application/rss+xml" title="Coding Horror" href="https://blog.codinghorror.com/rss/">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" async></script>
+    <script src="https://blog.codinghorror.com/assets/js/video-resize.js?v=9a339fd5d7" async></script>
+    <link rel="icon" href="https://blog.codinghorror.com/content/images/size/w256h256/2020/06/3cffc4b347c3587f19fe222caaac69f63b9a5e73.png" type="image/png">
+    <link rel="canonical" href="https://blog.codinghorror.com/why-cant-programmers-program/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://blog.codinghorror.com/why-cant-programmers-program/amp/">
+    
+    <meta property="og:site_name" content="Coding Horror">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Why Can&#x27;t Programmers.. Program?">
+    <meta property="og:description" content="I was incredulous when I read this observation from Reginald Braithwaite:
+
+
+
+Like me, the author is having trouble with the fact that 199 out of 200 applicants for every programming job can&#x27;t write code at all. I repeat: they can&#x27;t write any code whatsoever.
+
+
+
+The author he&#x27;s referring to is">
+    <meta property="og:url" content="https://blog.codinghorror.com/why-cant-programmers-program/">
+    <meta property="article:published_time" content="2007-02-26T12:00:00.000Z">
+    <meta property="article:modified_time" content="2023-05-20T20:57:05.000Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Why Can&#x27;t Programmers.. Program?">
+    <meta name="twitter:description" content="I was incredulous when I read this observation from Reginald Braithwaite:
+
+
+
+Like me, the author is having trouble with the fact that 199 out of 200 applicants for every programming job can&#x27;t write code at all. I repeat: they can&#x27;t write any code whatsoever.
+
+
+
+The author he&#x27;s referring to is">
+    <meta name="twitter:url" content="https://blog.codinghorror.com/why-cant-programmers-program/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Jeff Atwood">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Coding Horror",
+        "url": "https://blog.codinghorror.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.codinghorror.com/content/images/2014/Feb/coding_horror_official_logo_small.png"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jeff Atwood",
+        "url": "https://blog.codinghorror.com/author/jeff-atwood/",
+        "sameAs": [
+            "https://infosec.exchange/@codinghorror"
+        ]
+    },
+    "headline": "Why Can&#x27;t Programmers.. Program?",
+    "url": "https://blog.codinghorror.com/why-cant-programmers-program/",
+    "datePublished": "2007-02-26T12:00:00.000Z",
+    "dateModified": "2023-05-20T20:57:05.000Z",
+    "description": "I was incredulous when I read this observation from Reginald Braithwaite:\n\n\n\nLike me, the author is having trouble with the fact that 199 out of 200 applicants for every programming job can&#x27;t write code at all. I repeat: they can&#x27;t write any code whatsoever.\n\n\n\nThe author he&#x27;s referring to is Imran, who is evidently turning away lots of programmers who can&#x27;t write a simple program:\n\n\n\n\n\nAfter a fair bit of trial and error I&#x27;ve discovered that people who struggle to code don&#x27;t just struggle on bi",
+    "mainEntityOfPage": "https://blog.codinghorror.com/why-cant-programmers-program/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.88">
+    <link rel="alternate" type="application/rss+xml" title="Coding Horror" href="https://blog.codinghorror.com/rss/">
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.37/umd/portal.min.js" data-i18n="false" data-ghost="https://blog.codinghorror.com/" data-key="4cdc4eb742c4969fd6d5cc1b82" data-api="https://codinghorror.ghost.io/ghost/api/content/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="4cdc4eb742c4969fd6d5cc1b82" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://codinghorror.ghost.io/" crossorigin="anonymous"></script>
+    
+    <link href="https://blog.codinghorror.com/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=9a339fd5d7"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=9a339fd5d7">
+    <script defer src="/public/member-attribution.min.js?v=9a339fd5d7"></script><style>:root {--ghost-accent-color: #15171A;}</style>
+</head>
+
+<body class="post-template">
+
+    <header class="site-head">
+        <div class="site-head-content">
+            <a class="blog-logo" href="https://blog.codinghorror.com"><img src="https://blog.codinghorror.com/assets/images/codinghorror-app-icon.png?v=9a339fd5d7" alt="Coding Horror Logo" width="158" height="158" /></a>
+            <h1 class="blog-title"><a href="https://blog.codinghorror.com">Coding Horror</a></h1>
+            <h2 class="blog-description">programming and human factors</h2>
+            <div class="site-search">
+                <script>
+                  (function() {
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.src = 'https://www.google.com/cse/cse.js?cx=016956275695630057531:lqveu9tah7y';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                  })();
+                </script>
+                <gcse:search></gcse:search>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrap clearfix">
+        <div class="clearfix"></div>
+        
+<main class="content" role="main">
+
+    <article class="post no-image">
+
+
+            <span class="post-meta"><time datetime="2007-02-26">26 Feb 2007</time> </span>
+
+            <h1 class="post-title">Why Can&#x27;t Programmers.. Program?</h1>
+
+            <section class="post-content">
+                <!--kg-card-begin: markdown--><p>I was incredulous when I read <a href="http://weblog.raganwald.com/2007/01/dont-overthink-fizzbuzz.html?ref=blog.codinghorror.com">this observation from Reginald Braithwaite</a>:</p>
+<blockquote>
+Like me, the author is having trouble with the fact that <a href="http://www.joelonsoftware.com/items/2005/01/27.html?ref=blog.codinghorror.com">199 out of 200</a> applicants for every programming job can't write code at all. I repeat: <i>they can't write any code whatsoever</i>.
+</blockquote>
+<p>The author he's referring to is Imran, who is evidently <a href="http://tickletux.wordpress.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/?ref=blog.codinghorror.com">turning away lots of programmers who can't write a simple program</a>:</p>
+<blockquote>
+<p>After a fair bit of trial and error I've discovered that people who struggle to code don't just struggle on big problems, or even smallish problems (i.e. write a implementation of a linked list). <i>They struggle with tiny problems</i>.</p>
+<p>So I set out to develop questions that can identify this kind of developer and came up with a class of questions I call &quot;FizzBuzz Questions&quot; named after a game children often play (or are made to play) in schools in the UK. An example of a Fizz-Buzz question is the following:</p>
+<p>Write a program that prints the numbers from 1 to 100. But for multiples of three print &quot;Fizz&quot; instead of the number and for the multiples of five print &quot;Buzz&quot;. For numbers which are multiples of both three and five print &quot;FizzBuzz&quot;.</p>
+<p>Most good programmers should be able to write out on paper a program which does this in a under a couple of minutes. Want to know something scary? <b>The majority of comp sci graduates can't. I've also seen self-proclaimed senior programmers take more than 10-15 minutes to write a solution.</b></p>
+</blockquote>
+<p>Dan Kegel <a href="http://www.kegel.com/academy/getting-hired.html?ref=blog.codinghorror.com">had a similar experience hiring entry-level programmers</a>:</p>
+<blockquote>
+<p>A surprisingly large fraction of applicants, even those with masters' degrees and PhDs in computer science, fail during interviews when asked to carry out basic programming tasks. For example, I've personally interviewed graduates who can't answer &quot;Write a loop that counts from 1 to 10&quot; or &quot;What's the number after F in hexadecimal?&quot; Less trivially, I've interviewed many candidates who can't use recursion to solve a real problem. These are basic skills; anyone who lacks them probably hasn't done much programming.</p>
+<p>Speaking on behalf of software engineers who have to interview prospective new hires, I can safely say that we're tired of talking to candidates who can't program their way out of a paper bag. If you can successfully write a loop that goes from 1 to 10 in every language on your resume, can do simple arithmetic without a calculator, and can use recursion to solve a real problem, you're already ahead of the pack!</p>
+</blockquote>
+<p>Between Reginald, Dan, and Imran, I'm starting to get a little worried. I'm more than willing to cut freshly minted software developers slack at the beginning of their career. Everybody has to start somewhere. But <b>I am disturbed and appalled that any so-called programmer would apply for a job without being able to write the simplest of programs.</b> That's a slap in the face to anyone who writes software for a living.</p>
+<p>The <a href="https://blog.codinghorror.com/separating-programming-sheep-from-non-programming-goats/">vast divide between those who can program and those who cannot program</a> is well known. I assumed anyone applying for a job as a programmer had already crossed this chasm. Apparently this is not a reasonable assumption to make. Apparently, FizzBuzz style screening is <i>required</i> to keep interviewers from wasting their time interviewing programmers who can't program.</p>
+<p>Lest you think the FizzBuzz test is too easy –  and it is blindingly, intentionally easy –  a commenter to Imran's post notes its efficacy:</p>
+<blockquote>
+<p>I'd hate interviewers to dismiss [the FizzBuzz] test as being too easy - in my experience it is genuinely astonishing how many candidates are incapable of the simplest programming tasks.</p>
+</blockquote>
+<p><b>Maybe it's foolish to begin interviewing a programmer without looking at their code first.</b> At Vertigo, we require a code sample before we even proceed to the phone interview stage. And our on-site interview includes a small coding exercise. Nothing difficult, mind you, just a basic exercise to go through the motions of building a small application in an hour or so. Although there have been one or two notable flame-outs, for the most part, this strategy has worked well for us. It lets us focus on actual software engineering in the interview without <a href="http://www.codeslate.com/2007/01/you-dont-bury-survivors.html?ref=blog.codinghorror.com">resorting to tedious puzzle questions</a>.</p>
+<p>It's a shame you have to do so much pre-screening to <b>have the luxury of interviewing programmers who can actually <i>program</i></b>. It'd be funny if it wasn't so damn depressing. I'm <a href="https://blog.codinghorror.com/do-certifications-matter/">no fan of certification</a>, but it does make me wonder if Steve McConnell was on to something with all his talk of <a href="http://www.amazon.com/exec/obidos/ASIN/0321193679/codihorr-20?ref=blog.codinghorror.com">creating a true profession of software engineering</a>.</p>
+<p><font color="red">Due to high volume, comments for this entry are now closed.</font></p>
+<!--kg-card-end: markdown-->
+            </section>
+
+            <aside class="read-next">
+                    <div class="left">
+                      <div class="read-next-label">Next</div>                    
+                      <h3 class="read-next-title"><a href="/fizzbuzz-the-programmers-stairway-to-heaven/">FizzBuzz: the Programmer&#x27;s Stairway to Heaven</a></h3>
+                    </div>
+                    <div class="right">
+                      <div class="read-next-label">Previous</div>                                            
+                      <h3 class="read-next-title"><a href="/you-want-a-10000-rpm-boot-drive/">You Want a 10,000 RPM Boot Drive</a></h3>
+                    </div>
+            </aside>
+
+            <footer class="post-footer">
+
+                <section class="author">
+                    <h4>Written by Jeff Atwood</h4>
+                    <p>Indoor enthusiast. Co-founder of Stack Overflow and Discourse. Disclaimer: I have no idea what I&#x27;m talking about. Find me here:  <a href="https://infosec.exchange/@codinghorror">https://infosec.exchange/@codinghorror</a></p>
+                </section>
+
+            </footer>
+
+
+    </article>
+
+    <div id="discourse-comments"></div>
+
+    <script type="text/javascript">
+      var discourseUrl = "https://discourse.codinghorror.com/",
+          discourseEmbedUrl = 'https://blog.codinghorror.com/why-cant-programmers-program/';
+
+      (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+          d.src = discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+      })();
+    </script>
+
+</main>
+
+<aside class="sidebar">
+    <!-- <h3>&larr; Older</h3> <a href="https://blog.codinghorror.com">Read more posts</a> -->
+    <!-- 
+<div id="welovecodinghorror-block">
+    <span> 
+        <span class="block-wrap">
+            <a href="https://buddy.works/?utm_source=blog&utm_campaign=coding_hororr_bz" class="block-img" target="_blank"><img src="/content/images/2019/06/buddyworks-189x133px.png" width="189" height="133" alt="" border="0"></a> 
+            <a href="https://buddy.works/?utm_source=blog&utm_campaign=coding_hororr_bz" class="block-text" target="_blank">Get the fastest deployments in UI/UX that blows developers away</a>
+        </span>
+    </span>
+</div>
+-->
+
+<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYIK23L&placement=blogcodinghorrorcom" id="_carbonads_js"></script>
+
+<h3>Resources</h3>
+
+<ul>
+    <li><a href="/about-me/">About Me</a></li>    
+    <li><a href="https://www.discourse.org/">discourse.org</a></li>
+    <li><a href="https://stackexchange.com/">stackexchange.com</a></li>
+    <li><a href="https://commonmark.org/help/">Learn Markdown</a></li>    
+    <li><a href="/recommended-reading-for-developers/">Recommended Reading</a></li>
+</ul>
+
+<ul>
+    <li><a href="https://blog.codinghorror.com/rss/" class="icon-feed">&nbsp;Subscribe in a reader</a></li>
+    <li><a href="https://follow.it/codinghorror?action=followPub" class="icon-email">&nbsp;Subscribe via email</a></li>
+</ul>
+
+<p>Coding Horror has been continuously published since 2004</p>
+
+<footer class="site-footer">
+    <section class="copyright">Copyright <a rel="author" href="https://en.wikipedia.org/wiki/Jeff_Atwood">Jeff Atwood</a> &copy; 2024<br />
+        Logo image &copy; 1993 Steven C. McConnell <br />
+    Proudly published with <a class="icon-ghost" href="https://ghost.org">Ghost</a></section>
+</footer></aside>
+
+    </div>
+
+    
+       
+    <!-- Begin comScore Tag -->
+    <script>
+        document.write(unescape("%3Cscript src='https://sb.scorecardresearch.com/beacon.js'%3E%3C/script%3E"));
+    </script>
+    <script>
+        COMSCORE.beacon({
+        c1: 2,
+        c2: "6035669",
+        c3: "",
+        c4: "http://www.codinghorror.com/blog/",
+        c5: "",
+        c6: "",
+        c15: ""
+        });
+    </script>
+    <noscript>
+      <img src="//b.scorecardresearch.com/b?c1=2&amp;c2=6035669&amp;c3=&amp;c4=http%3A%2F%2Fwww.codinghorror.com%2Fblog%2F&amp;c5=&amp;c6=&amp;c15=&amp;cv=1.3&amp;cj=1" style="display:none" width="0" height="0" alt="" />
+    </noscript>
+    <!-- end comScore Tag -->
+</body>
+</html>

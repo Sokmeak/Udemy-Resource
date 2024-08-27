@@ -1,0 +1,9 @@
+=== CSS positioning ===
+1. static: default
+2. relative: relate to sth
+3. absolute: relative to nearest positioned ancestor or top left corner of the webpage
+4. 
+
+
+
+== appbrewery.gitbub.io/css-positioning/

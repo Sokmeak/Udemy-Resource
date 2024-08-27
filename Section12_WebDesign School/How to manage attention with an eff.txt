@@ -1,0 +1,6 @@
+How to manage attention with an effective user interface?
+1. Hierarchy: the order of the importance
+2. Layout: how the layout will be arranged
+3. Alignments: how the element will be aligned in the screen
+4. White space: the space which is empty
+5. Audience: who is your customer or target?

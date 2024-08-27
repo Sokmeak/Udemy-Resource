@@ -1,0 +1,4 @@
+=== JavaScript for manipulate HTML ===
+1. style
+2. text content
+3. attributes

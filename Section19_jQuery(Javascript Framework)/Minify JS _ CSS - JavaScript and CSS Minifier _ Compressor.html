@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" type="image/x-icon" href="https://www.minifier.org/favicon.ico">
+<meta name="_token" content="RNT6SNKkFsTQJitvFs0QIs5T2F523LaNM0yHSV4k" />
+<title>Minify JS / CSS - JavaScript and CSS Minifier / Compressor</title>
+<meta name="description" content="Minify JS and CSS online using this javascript & CSS compressor , or include the minifier in your project." />
+
+<link rel="canonical" href="https://www.minifier.org" />
+<link rel="alternate" hreflang="x-default" href="https://www.minifier.org" />
+<link rel="alternate" hreflang="en" href="https://www.minifier.org" />
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.minifier.org/web_assets/frontend/img/apple-touch-icon-144-precomposed.png" />
+<link rel="shortcut icon" href="https://www.minifier.org/web_assets/frontend/img/favicon.ico" />
+<meta property="og:title"
+    content="Minify JS and CSS online, or include the minifier in your project for on-the-fly compression." />
+<meta property="og:description"
+    content="Minify JS and CSS online, or include the minifier in your project for on-the-fly compression." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.minifier.org" />
+<meta property="og:image" content="https://www.minifier.org/img/logo_150.png" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:domain" content="minifier.org" />
+<meta name="twitter:title" content="JavaScript and CSS minifier" />
+<meta name="twitter:description"
+    content="Minify JS and CSS online, or include the minifier in your project for on-the-fly compression." />
+<meta name="twitter:image" content="https://www.minifier.org/img/logo_150.png" />
+<meta name="twitter:url" content="https://www.minifier.org/" />
+
+<link rel="stylesheet" href="https://www.minifier.org/web_assets/frontend/css/stylesheet.css?v=2.2.3" />
+<link rel="stylesheet" href="https://www.minifier.org/web_assets/frontend/css/prism.css?v=2.2.3" />
+<link rel="stylesheet" href="https://www.minifier.org/web_assets/frontend/css/style.css?v=2.2.3">
+        
+    
+            <style>
+        .no-www-warning {
+            background-color: #2b4258cf;
+            font-size: 1rem;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+                
+    <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header app-name">
+        <a href="https://www.minifier.org" class="font-bold nav-title">
+            Minify<span class="app-sub-title"> - JavaScript and CSS minifier</span>
+        </a>
+
+    </div>
+    <div class="nav-btn">
+        <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+        <div class="nav-links">
+                    <a class="tool-link" href="https://www.minifier.org/json-minifier" class="tool-link">JSON Minifier</a>
+                    <a class="tool-link" href="https://www.minifier.org/json-formatter" class="tool-link">JSON Formatter</a>
+                    <a class="tool-link" href="https://www.minifier.org/html-minifier" class="tool-link">HTML Minifier</a>
+                    <a class="tool-link" href="https://www.minifier.org/html-formatter" class="tool-link">HTML Formatter</a>
+                    <a class="tool-link" href="https://www.minifier.org/xml-formatter" class="tool-link">XML Formatter</a>
+                    <a class="tool-link" href="https://www.minifier.org/xml-validator" class="tool-link">XML Validator</a>
+            </div>
+</div>
+    
+    
+        <div class="panel" id="hero">
+        <a class="panel-label" href="https://www.minifier.org">minify</a>
+        <div class="container">
+            <span class="sample-btn js-sample">Sample [+]</span>
+            <form method="POST" id="js-minifier-form">
+                <textarea id="source" class="source" name="source" rows="5"
+                    placeholder="https://example.com/your-file.js or .css, or just plain JavaScript or CSS code"></textarea>
+
+                <div class="submit-section">
+                    <div class="left">
+                        <div id="types">
+                            Select Language:
+                            <input type="radio" name="type" value="js" id="type_js" />
+                            <label for="type_js">JS</label>
+                            <input type="radio" name="type" value="css" id="type_css" />
+                            <label for="type_css">CSS</label>
+                        </div>
+                        <div>
+                            <button type="submit" value="" class="submit-btn">Minify</button>
+                            <span id="error" class="error"></span>
+                            <span id="success" class="success"></span>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="action-btns visibility-hidden">
+    <span class="action-btn js-download" data-tooltip="Download" data-flow="top">
+        <img src="https://www.minifier.org/web_assets/frontend/img/icons/download.svg" alt="download" width="20">
+    </span>
+</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel content">
+        <div class="panel-label">description</div>
+        <div class="container">
+            <h1>
+                Minify JS / CSS<span class="app-sub-title"> - JavaScript and CSS minifier</span>
+            </h1>
+            <p>Minify JS and CSS using this online javascript / css compressor. You can paste .js or .css file, or just plain javascript or CSS code.&nbsp;&nbsp;</p><h2>Make your website smaller and faster to load by minifying the JS and CSS code.</h2><p>This JS and CSS minifier removes whitespace, strips comments, combines files, and optimizes/shortens a few common programming patterns. Minify JS / CSS comes with a huge test suite.</p><h2>Use it in your projects</h2><p>Simply add a dependency on matthiasmullie/minify to your composer.json file if you use Composer to manage the dependencies of your project: <br><code class="language-jsonp">composer require matthiasmullie/minify</code> <br>Although it&rsquo;s recommended to use Composer, you can actually include these files anyway you want.</p><h2>Contribute</h2><p>Dig into to the code. It&rsquo;s <a href="http://opensource.org/licenses/MIT">MIT-licensed</a>, so you&rsquo;re allowed to do pretty much anything with it. <br><code class="language-jsonp">git clone <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4a2d233e0a2d233e223f2864292527">[email&#160;protected]</a>:matthiasmullie/minify.git</code> <br><a href="https://github.com/matthiasmullie/minify/">Fork</a> the repository on GitHub, and send your pull requests! Any kind of help is welcome.</p>
+            <h2>Bugs?</h2><p>Please <a href="https://github.com/matthiasmullie/minify/issues">submit</a> any issue you encounter. In order to easily grasp the issue, be as thorough as possible in describing the bug! Please include the original JavaScript or CSS code, the incorrect minified result and the expected result. Bonus points for including a pull request with the issue added to the test suite!</p>
+            <h2>Documentation</h2>
+            <p>
+                <a href="https://travis-ci.org/matthiasmullie/minify"><img
+                        src="https://api.travis-ci.org/matthiasmullie/minify.svg?branch=master" alt="Build status" /></a>
+                <a href="https://codecov.io/github/matthiasmullie/minify"><img src="https://www.minifier.org/web_assets/frontend/img/codecov/c/github/matthiasmullie/minify.svg" alt="Code coverage" /></a>
+                <a href="https://scrutinizer-ci.com/g/matthiasmullie/minify"><img src="https://www.minifier.org/web_assets/frontend/img/scrutinizer/quality/g/matthiasmullie/minify.svg" alt="Code quality" /></a>
+                <a href="https://packagist.org/packages/matthiasmullie/minify"><img src="https://www.minifier.org/web_assets/frontend/img/packagist/v/matthiasmullie/minify.svg" alt="Latest version" /></a>
+                <a href="https://packagist.org/packages/matthiasmullie/minify"><img src="https://www.minifier.org/web_assets/frontend/img/packagist/dt/matthiasmullie/minify.svg" alt="Downloads total" /></a>
+                <a href="https://github.com/matthiasmullie/minify/blob/master/LICENSE"><img src="https://www.minifier.org/web_assets/frontend/img/packagist/l/matthiasmullie/minify.svg" alt="License" /></a>
+            </p>
+
+            
+            <pre><code class="language-php">use MatthiasMullie\Minify;
+  $minifier = new Minify\JS($path1, $path2);</code></pre>
+
+            <p><strong>add($path, /* overload paths */)</strong></p><p>This is roughly equivalent to the constructor.</p>
+
+            <pre><code class="language-php">$minifier->add($path3);
+  $minifier->add($js);</code></pre>
+
+            <p><strong>minify($path)</strong></p>
+
+            <p><strong>minify($path)</strong></p><p>This will minify the files&rsquo; content, save the result to $path and return the resulting content. If the $path parameter is omitted, the result will not be written anywhere.</p><p><em>CAUTION: If you have CSS with relative paths (to imports, images, &hellip;), you should always specify a target path! Then those relative paths will be adjusted in accordance with the new path.</em></p>
+
+            <pre class="language-php"><code>$minifier->minify('/target/path.js');</code></pre>
+
+            <p><strong>gzip($path, $level)</strong></p><p>Minifies and optionally saves to a file, just like <code class="language-plaintext highlighter-rouge">minify()</code>, but it also <code class="language-plaintext highlighter-rouge">gzencode()</code>s the minified content.</p>
+
+            <pre class="language-php"><code>$minifier->gzip('/target/path.js');</code></pre>
+
+            <p><strong>setMaxImportSize($size) </strong><em>(CSS only)</em></p><p>The CSS minifier will automatically embed referenced files (like images, fonts, &hellip;) into the minified CSS, so they don&rsquo;t have to be fetched over multiple connections.</p><p>However, for really large files, it&rsquo;s likely better to load them separately (as it would increase the CSS load time if they were included.)</p><p>This method allows the max size of files to import into the minified CSS to be set (in kB). The default size is 5.</p>
+            <pre class="language-php"><code>$minifier->setMaxImportSize(10);</code></pre>
+
+            <p><strong>setImportExtensions($extensions) </strong><em>(CSS only)</em></p><p>The CSS minifier will automatically embed referenced files (like images, fonts, &hellip;) into minified CSS, so they don&rsquo;t have to be fetched over multiple connections.</p><p>This methods allows the type of files to be specified, along with their data:mime type.</p><p>The default embedded file types are gif, png, jpg, jpeg, svg and woff.</p>
+
+            <pre class="language-php"><code>$extensions = array(
+    'gif' => 'data:image/gif',
+    'png' => 'data:image/png',
+  );
+          
+  $minifier->setImportExtensions($extensions);</code></pre>
+
+            <h2>Example Usage</h2><p><strong>Minify JavaScript&nbsp;</strong></p>
+
+            <pre class="language-php"><code>use MatthiasMullie\Minify;
+  
+    $sourcePath = '/path/to/source/css/file.js';
+    $minifier = new Minify\JS($sourcePath);
+    
+    // we can even add another file, they'll then be
+    // joined in 1 output file
+    $sourcePath2 = '/path/to/second/source/css/file.js';
+    $minifier->add($sourcePath2);
+    
+    // or we can just add plain js
+    $js = 'var test = 1';
+    $minifier->add($js);
+    
+    // save minified file to disk
+    $minifiedPath = '/path/to/minified/js/file.js';
+    $minifier->minify($minifiedPath);
+    
+    // or just output the content
+    echo $minifier->minify();</code></pre>
+
+            <p><strong>Minify CSS</strong></p>
+
+            <pre class="language-php"><code>use MatthiasMullie\Minify;
+  
+      $sourcePath = '/path/to/source/css/file.css';
+      $minifier = new Minify\CSS($sourcePath);
+      
+      // we can even add another file, they'll then be
+      // joined in 1 output file
+      $sourcePath2 = '/path/to/second/source/css/file.css';
+      $minifier->add($sourcePath2);
+      
+      // or we can just add plain CSS
+      $css = 'body { color: #000000; }';
+      $minifier->add($css);
+      
+      // save minified file to disk
+      $minifiedPath = '/path/to/minified/css/file.css';
+      $minifier->minify($minifiedPath);
+      
+      // or just output the content
+      echo $minifier->minify();</code></pre>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+    <span class="other-tools-heading">Other Tools</span>
+    <div class="other-tools">
+                                                            <a class="single-tool" href="https://www.minifier.org/html-minifier">
+                    HTML Minifier
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/json-minifier">
+                    JSON Minifier
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/json-formatter">
+                    JSON Formatter
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/html-formatter">
+                    HTML Formatter
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/xml-formatter">
+                    XML Formatter
+                </a>
+                                                                        <a class="single-tool" href="https://www.minifier.org/xml-validator">
+                    XML Validator
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/java-viewer">
+                    JAVA Viewer
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/yaml-validator">
+                    YAML Validator
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/html-decoder">
+                    HTML Decoder
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/php-beautifier">
+                    PHP Beautifier
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/excel-to-json">
+                    Excel to JSON
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/sql-formatter">
+                    SQL Formatter
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/html-to-markdown">
+                    HTML to Markdown
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/csv-viewer">
+                    CSV Viewer
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/diff-checker">
+                    Diff Checker
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/json-to-java">
+                    JSON to JAVA
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/json-to-php">
+                    JSON to PHP
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/json-to-yaml">
+                    JSON to YAML
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/xml-to-json">
+                    XML to JSON
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/yaml-to-json">
+                    YAML to JSON
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/xml-to-yaml">
+                    XML to YAML
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/json-to-xml">
+                    JSON to XML
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/css-formatter">
+                    CSS Formatter
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/javascript-beautifier">
+                    JavaScript Beautifier
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/yaml-formatter">
+                    YAML Formatter
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/markdown-formatter">
+                    Markdown Formatter
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/text-to-html-converter">
+                    Text to HTML Converter
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/csv-to-json-converter">
+                    CSV to JSON Converter
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/css-validator">
+                    CSS Validator
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/html-validator">
+                    HTML Validator
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/base64-encoder-decoder">
+                    Base64 Encoder Decoder
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/sql-minifier">
+                    SQL Minifier
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/text-minifier">
+                    Text Minifier
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/lua-minifier">
+                    Lua Minifier
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/xml-minifier">
+                    XML Minifier
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/html-to-php-converter">
+                    HTML to PHP Converter
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/html-to-tsv-converter">
+                    HTML to TSV Converter
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/json-to-csv">
+                    JSON to CSV
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/json-to-tsv">
+                    JSON to TSV
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/json-viewer">
+                    JSON Viewer
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/xml-viewer">
+                    XML Viewer
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/html-viewer">
+                    HTML Viewer
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/javascript-validator">
+                    JavaScript Validator
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/image-to-html">
+                    Image to HTML
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/excel-to-html">
+                    Excel to HTML
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/excel-to-xml">
+                    Excel to XML
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/csv-to-xml">
+                    CSV to XML
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/csv-to-html">
+                    CSV to HTML
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/xml-to-csv">
+                    XML to CSV
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/xml-to-tsv">
+                    XML to TSV
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/xml-to-excel">
+                    XML to Excel
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/json-to-excel">
+                    JSON to Excel
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/sql-to-csv-converter">
+                    SQL to CSV Converter
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/sql-to-json-converter">
+                    SQL to JSON Converter
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/sql-to-xml-converter">
+                    SQL to XML Converter
+                </a>
+                                                            <a class="single-tool" href="https://www.minifier.org/sql-to-yaml-converter">
+                    SQL to YAML Converter
+                </a>
+                        </div>
+</div>
+    </div>
+    
+    
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGRDRRMQZS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SGRDRRMQZS');
+    </script>
+
+<script src="https://www.minifier.org/web_assets/frontend/script/common.js?v=2.2.3"></script>
+    <script src="https://www.minifier.org/web_assets/frontend/script/minifier.js?v=2.2.3"></script>
+    <script src="https://www.minifier.org/web_assets/frontend/script/prism.js?v=2.2.3"></script>
+
+<footer>
+    <ul class="ul-footer">
+        <li class="li-footer">&#169; 2024 <a href="https://www.minifier.org">Minifier.org</a></li>
+    </ul>
+</footer>
+    
+</body>
+
+</html>
