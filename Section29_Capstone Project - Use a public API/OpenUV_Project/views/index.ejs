@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>UV Index Checker</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Check UV Index</h1>
+      <form action="/get-uv" method="POST">
+        <label for="lat">Latitude (-90.00 to 90.00): </label>
+        <input
+          type="number"
+          id="lat"
+          name="lat"
+          step="0.1"
+          placeholder="1"
+          min="-90.00"
+          max="90.00"
+          required />
+
+        <label for="lng">Lagitude (-180.00 to 180.00): </label>
+        <input
+          type="number"
+          id="lng"
+          name="lng"
+          step="0.1"
+          placeholder="1"
+          min="-180.00"
+          max="180.00"
+          required />
+
+        <label for="alt">Altitude (0 to 10000): </label>
+        <input
+          type="number"
+          id="alt"
+          name="alt"
+          step="1"
+          placeholder="1"
+          min="0"
+          max="10000" />
+
+        <label for="dt">Historical Date (mm/dd/yy hh:mm AM/PM): </label>
+        <input
+          type="text"
+          id="dt"
+          name="dt"
+          placeholder="mm/dd/yyyy hh:mm AM/PM"
+          pattern="\d{2}/\d{2}/\d{4} \d{2}:\d{2} (AM|PM)" />
+
+        <button type="submit">Check UV Index</button>
+      </form>
+
+      <% if(uvData){ %>
+      <h2>UV Index: <%= uvData.uv %></h2>
+      <p>UV Risk Level: <%= uvData.uv_max %></p>
+      <% } %> <% if(error) {%>
+      <p class="error"><%= error %></p>
+
+      <% } %>
+    </div>
+
+    <!-- <script>
+      function validateDateTime() {
+        const dataTimeInput = document.getElementById("d").value;
+
+        const regex = /^\d{2}\/\d{2}\/\d{4} \d{2}:\d{2} (AM|PM)$/;
+
+        if (!regex.test(dataTimeInput)) {
+          alert(
+            "Please enter the date and time in the format mm/dd/yyyy hh:mm AM/PM."
+          );
+          return false;
+        }
+
+        return true;
+      }
+    </script> -->
+  </body>
+</html>

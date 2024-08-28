@@ -1,0 +1,8 @@
+ 	What makes API RESTful?
+- Standard HTTP Methods: GET, POST, PUT, PATCH, DELETE
+- JSON output: specific forma
+- Client-Server: is separated
+- Stateless: All information that the server need, and send the respond 
+- Resource-Based: URL, URI
+
+ 
