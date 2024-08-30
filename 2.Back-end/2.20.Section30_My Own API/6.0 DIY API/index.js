@@ -9,15 +9,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //1. GET a random joke
 
-app.get("/random",(req, res)=>{
+app.get("/random", (req, res) => {
   const randomIndex = Math.floor(Math.random() * jokes.length);
   res.json(jokes[randomIndex]);
 });
 
 //2. GET a specific joke
-app.get("/jokes/:id",(req,res)=>{
+app.get("/jokes/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  const foundJoke = jokes.find((joke) => joke.id ===id);
+  const foundJoke = jokes.find((joke) => joke.id === id);
   res.json(foundJoke);
 });
 //3. GET a jokes by filtering on the joke type
@@ -27,16 +27,85 @@ app.get("/filter", (req, res) => {
   res.json(filteredJoke);
 });
 
-
 //4. POST a new joke
+
+app.post("/jokes", (req, res) => {
+  const newJoke = {
+    id: jokes.length + 1,
+    jokeText: req.body.jokeText,
+    jokeType: req.body.jokeType,
+  };
+  jokes.push(newJoke);
+  console.log(jokes.slice(-1));
+  res.json(newJoke);
+});
 
 //5. PUT a joke
 
+app.put("/jokes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const replacementJoke = {
+    id: id,
+    jokeText: req.body.jokeText,
+    jokeType: req.body.jokeType,
+  };
+
+  const indexToReplace = jokes.findIndex((joke) => joke.id === id);
+  jokes[indexToReplace] = replacementJoke;
+  res.json(replacementJoke);
+});
+
 //6. PATCH a joke
+
+app.patch("/jokes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const existingJoke = jokes.find((joke) => joke.id === id);
+
+  const replacementJoke = {
+    id: id,
+    jokeText: req.body.text || existingJoke.jokeText,
+    jokeType: req.body.type || existingJoke.jokeType,
+  };
+
+  const replaceIndex = jokes.findIndex((joke) => joke.id === id);
+  jokes[replaceIndex] = replacementJoke;
+  res.json(replacementJoke);
+  console.log(replacementJoke);
+});
 
 //7. DELETE Specific joke
 
+app.delete("/jokes/:id", (req, res) => {
+  const id = req.params.id;
+  console.log(id);
+  let mes;
+
+  const jokeIndexToDelete = jokes.findIndex((joke) => joke.id == id);
+  console.log(jokeIndexToDelete);
+  if (jokeIndexToDelete > -1) {
+    jokes.slice(jokeIndexToDelete, 1);
+    mes = "Ok";
+    res.sendStatus(200);
+  } else {
+    mes = "Invalid index";
+
+    res.sendStatus(404);
+  }
+});
+
 //8. DELETE All jokes
+
+app.delete("/all", (req, res) => {
+  const userKey = req.query.key;
+  if (userKey === masterKey) {
+    jokes = []; // clear temperary jokes array
+    res.sendStatus(200);
+  } else {
+    res
+      .status(404)
+      .json({ error: `You are not authorised to perform this action!` });
+  }
+});
 
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
