@@ -1,0 +1,40 @@
+<%- include('partials/header') %>
+<h1>My Book Notes</h1>
+<!--  <a href="/books/add">Add New Book</a>-->
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Rating</th>
+      <th>Date Read</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% books.forEach(book => { %>
+    <tr>
+      <td><%= book.title %></td>
+      <td><%= book.author %></td>
+      <td><%= book.rating %></td>
+      <td><%= book.date_read %></td>
+      <td>
+        <form
+          id="btn-block"
+          action="/books/delete/<%= book.id %>"
+          method="POST">
+          <button id="update-btn">
+            <a id="a-edit" href="/books/update/<%= book.id %>">Edit</a>
+          </button>
+          <button id="view-btn">
+            <a id="a-view" href="/books/<%= book.id %>">View</a>
+          </button>
+
+          <button id="delete-btn" type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+<%- include('partials/footer') %>

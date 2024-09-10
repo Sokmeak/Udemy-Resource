@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<h1><%= book.title %></h1>
+<div class="container_book">
+  <img
+    src="<%= book.cover_url %>"
+    alt="<%= book.title %> cover"
+    style="width: 200px" />
+  <div class="content-wrap">
+    <p><strong>Author:</strong> <%= book.author %></p>
+    <p><strong>Rating:</strong> <%= book.rating %>/5</p>
+    <p><strong>Review:</strong> <%= book.review %></p>
+    <p><strong>Date Read:</strong> <%= book.date_read %></p>
+  </div>
+</div>
+
+<!-- <a href="/books/update/<%= book.id %>">Edit</a>
+<form action="/books/delete/<%= book.id %>" method="POST">
+    <button type="submit">Delete</button>
+</form> -->
+<%- include('partials/footer') %>

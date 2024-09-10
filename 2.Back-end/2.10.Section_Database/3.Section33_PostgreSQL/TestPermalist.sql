@@ -1,0 +1,5 @@
+CREATE TABLE items(
+id SERIAL PRIMARY KEY,
+title VARCHAR(150) NOT NULL
+);
+
