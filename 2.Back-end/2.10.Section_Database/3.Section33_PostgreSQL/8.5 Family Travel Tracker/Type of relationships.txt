@@ -2,3 +2,10 @@ Type of relationships
 1. one to one
 2. one to many
 3. many to many
+
+=== ALTER keyword used for modify table
+== UPDATE 
+== DROP
+== ORDER BY 
+== AND COMBINATION
+

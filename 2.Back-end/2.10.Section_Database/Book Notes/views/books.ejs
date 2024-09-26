@@ -18,23 +18,55 @@
       <td><%= book.author %></td>
       <td><%= book.rating %></td>
       <td><%= book.date_read %></td>
-      <td>
-        <form
-          id="btn-block"
-          action="/books/delete/<%= book.id %>"
-          method="POST">
-          <button id="update-btn">
-            <a id="a-edit" href="/books/update/<%= book.id %>">Edit</a>
-          </button>
-          <button id="view-btn">
-            <a id="a-view" href="/books/<%= book.id %>">View</a>
-          </button>
+      <td id="button-group">
+        <div id="btn-block">
+          <!-- Update Button (Navigates to the update page) -->
+          <a id="a-edit" href="/books/update/<%= book.id %>">
+            <button id="update-btn" type="button">
+              <i
+                style="color: rgba(228, 229, 236, 0.963)"
+                class="fa-solid fa-pen"></i>
+            </button>
+          </a>
 
-          <button id="delete-btn" type="submit">Delete</button>
-        </form>
+          <!-- View Button (Navigates to the book view page) -->
+          <a id="a-view" href="/books/<%= book.id %>">
+            <button id="view-btn" type="button">
+              <i
+                style="color: rgba(227, 227, 227, 0.963)"
+                class="fa-solid fa-eye"></i>
+            </button>
+          </a>
+
+          <!-- Delete Button (Submits form to delete the book) -->
+          <form action="/books/delete/<%= book.id %>" method="POST">
+            <button id="delete-btn" type="submit">
+              <i
+                style="color: rgba(231, 12, 12, 0.963)"
+                class="fa-solid fa-trash"></i>
+            </button>
+          </form>
+        </div>
       </td>
     </tr>
     <% }) %>
   </tbody>
 </table>
 <%- include('partials/footer') %>
+
+<!-- 
+
+   <form id="btn-block" action="/books/< book.id %>" method="POST">
+          <button id="view-btn" type="submit">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+        </form>
+
+        <form
+          id="btn-block"
+          action="/books/update/< book.id %>"
+          method="POST">
+          <button id="update-btn" type="submit">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+        </form> -->

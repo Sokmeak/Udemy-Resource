@@ -33,7 +33,7 @@ footer {
 }
 
 footer p {
-  color: #ccc;
+  color: #686464;
 }
 .note {
   background: #fff;
@@ -44,6 +44,10 @@ footer p {
   margin: 16px;
   float: left;
 }
+.note :hover {
+  cursor: help;
+}
+
 .note h1 {
   font-size: 1.1em;
   margin-bottom: 6px;
