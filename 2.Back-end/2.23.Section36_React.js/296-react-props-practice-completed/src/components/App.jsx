@@ -3,27 +3,23 @@ import Card from "./Card";
 import contacts from "../contacts";
 
 function App() {
+  const contactCards = [];
+  for (let i = 0; i < contacts.length; i++) {
+    contactCards.push(
+      <Card
+        key={i}
+        name={contacts[i].name}
+        img={contacts[i].imgURL}
+        tel={contacts[i].phone}
+        email={contacts[i].email}
+      />
+    );
+  }
+
   return (
     <div>
       <h1 className="heading">My Contacts</h1>
-      <Card
-        name={contacts[0].name}
-        img={contacts[0].imgURL}
-        tel={contacts[0].phone}
-        email={contacts[0].email}
-      />
-      <Card
-        name={contacts[1].name}
-        img={contacts[1].imgURL}
-        tel={contacts[1].phone}
-        email={contacts[1].email}
-      />
-      <Card
-        name={contacts[2].name}
-        img={contacts[2].imgURL}
-        tel={contacts[2].phone}
-        email={contacts[2].email}
-      />
+      {contactCards}
     </div>
   );
 }

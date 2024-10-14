@@ -1,16 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import { Fab } from "@mui/material";
 import { Zoom } from "@mui/material";
+import pg from "pg";
 
 function CreateArea(props) {
   const [isExpanded, setExpanded] = useState(false);
 
-  const [note, setNote] = useState({
-    title: "",
-    content: "",
-  });
+  useEffect(() => {
+    const db = new Client({
+      user: "postgres",
+      host: "localhost",
+      database: "Keeper",
+      password: "sokmeak1376@",
+      port: 5432,
+    });
 
+    const fetchInitialNotes = async () => {
+      try {
+        await db.connect(); // Connect to the database
+        const response = await db.query("SELECT * FROM notes");
+        setNotes(response.rows); // Store fetched notes
+      } catch (error) {
+        console.error("Error fetching notes:", error);
+      } finally {
+        await db.end(); // Close the database connection
+      }
+    };
+
+    fetchInitialNotes();
+  }, []); // Empty dependency array to run once on mount
   function handleChange(event) {
     const { name, value } = event.target;
 
